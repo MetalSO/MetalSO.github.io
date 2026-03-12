@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>制作系统u盘时的注意事项 | SO的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="本文介绍在制作Ubuntu系统u盘时遇到的问题，最关键的细节，以及解决方案。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="制作系统u盘时的注意事项">
+<meta property="og:url" content="https://metalso.github.io/2026/03/07/%E5%88%B6%E4%BD%9C%E7%B3%BB%E7%BB%9Fu%E7%9B%98%E6%97%B6%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/index.html">
+<meta property="og:site_name" content="SO的博客">
+<meta property="og:description" content="本文介绍在制作Ubuntu系统u盘时遇到的问题，最关键的细节，以及解决方案。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-03-07T15:22:36.000Z">
+<meta property="article:modified_time" content="2026-03-10T12:46:13.200Z">
+<meta property="article:author" content="SO">
+<meta property="article:tag" content="注意事项">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="SO的博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">SO的博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">持续学习，持续输出</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://MetalSO.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-制作系统u盘时的注意事项" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/03/07/%E5%88%B6%E4%BD%9C%E7%B3%BB%E7%BB%9Fu%E7%9B%98%E6%97%B6%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" class="article-date">
+  <time class="dt-published" datetime="2026-03-07T15:22:36.000Z" itemprop="datePublished">2026-03-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      制作系统u盘时的注意事项
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="1-如果不是空u盘，一定要将u盘格式化后再安装（切忌装失败的u盘直接再进安装程序）"><a href="#1-如果不是空u盘，一定要将u盘格式化后再安装（切忌装失败的u盘直接再进安装程序）" class="headerlink" title="1.如果不是空u盘，一定要将u盘格式化后再安装（切忌装失败的u盘直接再进安装程序）"></a>1.如果不是空u盘，一定要将u盘格式化后再安装（切忌装失败的u盘直接再进安装程序）</h2><p>u盘如果其中还有之前安装失败的系统的话，在读取u盘时安装程序会卡住，因为系统会将要安装系统的u盘也认为是一个系统从而陷入故障，并且有可能造成在后续的读取过程中故障，造成在安装过程中卡死，从而又变成安装失败的u盘进入死循环。</p>
+<h2 id="2-一定要在bios高级选项中打开AHCI模式"><a href="#2-一定要在bios高级选项中打开AHCI模式" class="headerlink" title="2.一定要在bios高级选项中打开AHCI模式"></a>2.一定要在bios高级选项中打开AHCI模式</h2><p><strong>关闭 VMD，就是直接解决你安装时卡死、GRUB 报错的核心根源操作，甚至可以说，你之前 90% 的安装问题，都是因为 VMD 默认开启导致的</strong>。</p>
+<hr>
+<h3 id="一、先搞懂：VMD-到底是什么？"><a href="#一、先搞懂：VMD-到底是什么？" class="headerlink" title="一、先搞懂：VMD 到底是什么？"></a>一、先搞懂：VMD 到底是什么？</h3><p>VMD 全称是 Intel Volume Management Device，是 Intel 给新平台笔记本做的「硬盘卷管理技术」，华硕的新款轻薄本默认都会开启，配合 Intel RST 快速存储技术使用。</p>
+<p>简单说：<strong>开着 VMD 的时候，你的电脑硬盘会被 VMD 控制器完全接管，Windows 有 Intel 专属的驱动能正常用，但 Ubuntu 系统默认不带这个驱动，完全认不出、读不通你的硬盘</strong>。</p>
+<hr>
+<h3 id="二、为什么开着-VMD，会导致你安装时疯狂卡死、报错？"><a href="#二、为什么开着-VMD，会导致你安装时疯狂卡死、报错？" class="headerlink" title="二、为什么开着 VMD，会导致你安装时疯狂卡死、报错？"></a>二、为什么开着 VMD，会导致你安装时疯狂卡死、报错？</h3><p>完全对应你之前遇到的所有问题：</p>
+<ol>
+<li><p><strong>直接导致「查找其他操作系统」那步死机</strong></p>
+<p>负责这个功能的工具叫<code>os-prober</code>，它的核心工作就是扫描硬盘上的所有分区、系统引导信息。但 VMD 开着的时候，Ubuntu 根本读不到你的硬盘，<code>os-prober</code>会直接陷入「读盘 - 失败 - 重试」的死循环，直接把整个安装程序卡死，这就是你之前那步死机的核心元凶。</p>
+</li>
+<li><p><strong>直接导致「GRUB 安装失败」的致命错误</strong></p>
+<p>GRUB 是 Ubuntu 的系统引导程序，安装时需要写入到你硬盘的 EFI 分区里。但 VMD 开着的时候，Ubuntu 连硬盘都认不全，根本没法正常读写 EFI 分区，自然就会报「无法将 GRUB 安装到 &#x2F;dev&#x2F;sdb」的致命错误，安装直接中断。</p>
+</li>
+<li><p><strong>加重多 U 盘启动卡死的问题</strong></p>
+<p>你之前插两个 U 盘就卡在选择安装系统的步骤，也是因为 VMD 接管硬盘后，Ubuntu 的磁盘编号识别完全混乱，再加上多 U 盘的介质干扰，直接触发了安装程序的原生兼容 bug，卡在启动环节动不了。</p>
+</li>
+</ol>
+<hr>
+<h3 id="三、关闭-VMD-之后，到底有什么用？"><a href="#三、关闭-VMD-之后，到底有什么用？" class="headerlink" title="三、关闭 VMD 之后，到底有什么用？"></a>三、关闭 VMD 之后，到底有什么用？</h3><ol>
+<li><p><strong>让硬盘切换到 Ubuntu 原生兼容的 AHCI 模式</strong></p>
+<p>关闭 VMD 后，Intel 的硬盘接管直接失效，你的硬盘会回到最通用、兼容性最好的 AHCI 模式，Ubuntu 安装镜像自带 AHCI 的完整驱动，能完美识别你的硬盘、所有分区，从根源解决「读不到盘、认不出分区」的问题。</p>
+</li>
+<li><p><strong>彻底解决 os-prober 扫描卡死的问题</strong></p>
+<p>现在 Ubuntu 能正常读取硬盘了，哪怕你不禁用<code>os-prober</code>，它也能正常完成扫描，不会再死循环死机；再配合我们之前给的禁用<code>os-prober</code>的命令，双重保险，绝对不会再卡那一步。</p>
+</li>
+<li><p><strong>100% 解决 GRUB 引导安装失败的问题</strong></p>
+<p>现在 Ubuntu 能正常读写你的 EFI 分区了，安装引导程序时，能顺利把 GRUB 写入到硬盘里，不会再报之前的致命错误。</p>
+</li>
+<li><p><strong>解决磁盘识别混乱的问题</strong></p>
+<p>关闭 VMD 后，你的内置硬盘、U 盘的编号会变得清晰稳定，不会再出现插两个 U 盘就识别混乱、卡死的问题，安装程序能准确区分「哪个是系统盘、哪个是安装 U 盘」。</p>
+</li>
+</ol>
+<h2 id="3-关闭快速启动"><a href="#3-关闭快速启动" class="headerlink" title="3.关闭快速启动"></a>3.关闭快速启动</h2><h2 id="4-不用太在意u盘的配置，装不上80-是操作的问题"><a href="#4-不用太在意u盘的配置，装不上80-是操作的问题" class="headerlink" title="4.不用太在意u盘的配置，装不上80%是操作的问题"></a>4.不用太在意u盘的配置，装不上80%是操作的问题</h2><h2 id="5-在安装选项界面一定要选其他模式安装，否则会破坏个人使用的操作系统"><a href="#5-在安装选项界面一定要选其他模式安装，否则会破坏个人使用的操作系统" class="headerlink" title="5.在安装选项界面一定要选其他模式安装，否则会破坏个人使用的操作系统"></a>5.在安装选项界面一定要选其他模式安装，否则会破坏个人使用的操作系统</h2><h2 id="6-要注意u盘的读写速度，过低会影响安装程序的正常运行"><a href="#6-要注意u盘的读写速度，过低会影响安装程序的正常运行" class="headerlink" title="6.要注意u盘的读写速度，过低会影响安装程序的正常运行"></a>6.要注意u盘的读写速度，过低会影响安装程序的正常运行</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://metalso.github.io/2026/03/07/%E5%88%B6%E4%BD%9C%E7%B3%BB%E7%BB%9Fu%E7%9B%98%E6%97%B6%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" data-id="cuidel3PbfkOIt0_VsHj5ga5R" data-title="制作系统u盘时的注意事项" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" rel="tag">注意事项</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2026/03/11/%E8%AF%B4%E4%BA%9B%E5%BF%83%E9%87%8C%E8%AF%9D/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          test
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2026/03/07/Misc/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">Misc题</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/" rel="tag">PHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ctf/" rel="tag">ctf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/obsidian/" rel="tag">obsidian</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" rel="tag">注意事项</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/ctf/" style="font-size: 20px;">ctf</a> <a href="/tags/obsidian/" style="font-size: 10px;">obsidian</a> <a href="/tags/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" style="font-size: 10px;">注意事项</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/03/">三月 2026</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/03/12/imagetest/">imagetest</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/12/PHP/">PHP语法</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/11/obsidian%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2blog%E6%96%B9%E6%A1%88/">obsidian自动部署blog</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/11/%E8%AF%B4%E4%BA%9B%E5%BF%83%E9%87%8C%E8%AF%9D/">test</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/07/%E5%88%B6%E4%BD%9C%E7%B3%BB%E7%BB%9Fu%E7%9B%98%E6%97%B6%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">制作系统u盘时的注意事项</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 SO<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

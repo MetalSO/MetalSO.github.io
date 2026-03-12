@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>obsidian自动部署blog | SO的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="本文介绍可在obsidian自动化部署博客的方案">
+<meta property="og:type" content="article">
+<meta property="og:title" content="obsidian自动部署blog">
+<meta property="og:url" content="https://metalso.github.io/2026/03/11/obsidian%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2blog%E6%96%B9%E6%A1%88/index.html">
+<meta property="og:site_name" content="SO的博客">
+<meta property="og:description" content="本文介绍可在obsidian自动化部署博客的方案">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://metalso.github.io/.io//5.png">
+<meta property="article:published_time" content="2026-03-11T10:52:18.000Z">
+<meta property="article:modified_time" content="2026-03-12T12:11:17.811Z">
+<meta property="article:author" content="SO">
+<meta property="article:tag" content="blog">
+<meta property="article:tag" content="obsidian">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://metalso.github.io/.io//5.png">
+  
+    <link rel="alternate" href="/atom.xml" title="SO的博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">SO的博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">持续学习，持续输出</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://MetalSO.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-obsidian自动部署blog方案" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/03/11/obsidian%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2blog%E6%96%B9%E6%A1%88/" class="article-date">
+  <time class="dt-published" datetime="2026-03-11T10:52:18.000Z" itemprop="datePublished">2026-03-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      obsidian自动部署blog
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="一、方案核心原理"><a href="#一、方案核心原理" class="headerlink" title="一、方案核心原理"></a>一、方案核心原理</h2><p>首先理清 Hexo 博客的<strong>双仓库逻辑</strong>，这是避免后续踩坑的关键：</p>
+<ol>
+<li><strong>源文件仓库（hexo-blog-source）</strong>：存放 Hexo 的核心配置、主题文件、文章源文件（<code>.md</code>格式），也是 Obsidian 编辑文章的本地目录，所有写作操作都围绕这个仓库展开。</li>
+<li><strong>页面展示仓库（MetalSO.github.io）</strong>：Hexo 自动生成的静态网页文件专属仓库，无需手动操作，由 Hexo 部署命令自动推送更新，最终通过 GitHub Pages 展示博客。</li>
+</ol>
+<p>我们的目标：<strong>Obsidian 写完文章→自动同步源文件到 GitHub 源仓库→一键 &#x2F; 自动执行 Hexo 部署→网页仓库更新→博客实时发布</strong>，实现「写完即上线」的自动化流程。</p>
+<h2 id="二、前期准备"><a href="#二、前期准备" class="headerlink" title="二、前期准备"></a>二、前期准备</h2><ol>
+<li>已搭建好 Hexo 博客，本地博客根目录为<code>soblog</code>（核心路径：<code>C:\Users\Administrator\soblog</code>），且拥有上述两个 GitHub 仓库；</li>
+<li>本地安装 Git，完成 GitHub 账号的基础配置；</li>
+<li>Obsidian 已安装<strong>Git 插件</strong>，这是实现自动同步的核心工具；</li>
+<li>确认本地博客文章统一存放在<code>soblog/source/_posts/</code>路径下（Hexo 默认文章目录，只有放在这里才能被识别生成博客页面）。</li>
+</ol>
+<h2 id="三、关键配置步骤"><a href="#三、关键配置步骤" class="headerlink" title="三、关键配置步骤"></a>三、关键配置步骤</h2><h3 id="（一）Git-仓库关联与分支对齐（解决推送报错核心）"><a href="#（一）Git-仓库关联与分支对齐（解决推送报错核心）" class="headerlink" title="（一）Git 仓库关联与分支对齐（解决推送报错核心）"></a>（一）Git 仓库关联与分支对齐（解决推送报错核心）</h3><p>之前踩过「本地 master 分支、远程 main 分支不匹配」「仓库关联错误」的坑，这一步先把基础配置捋顺：</p>
+<ol>
+<li>打开终端，进入本地 Hexo 根目录</li>
+</ol>
+<p>bash</p>
+<p>运行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd C:\Users\Administrator\博客目录</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>关联正确的<strong>源文件仓库</strong>（别再关联页面展示仓库啦）</li>
+</ol>
+<p>bash</p>
+<p>运行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url origin https://github.com/MetalSO/hexo-blog-source.git</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>统一分支为 main（GitHub 默认主分支，避免分支冲突）</li>
+</ol>
+<p>bash</p>
+<p>运行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -M main</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>绑定本地与远程 main 分支，解决「上游分支不匹配」报错</li>
+</ol>
+<p>bash</p>
+<p>运行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -u origin/main</span><br></pre></td></tr></table></figure>
+
+<h3 id="（二）Obsidian-Git-插件自动同步配置"><a href="#（二）Obsidian-Git-插件自动同步配置" class="headerlink" title="（二）Obsidian Git 插件自动同步配置"></a>（二）Obsidian Git 插件自动同步配置</h3><p>这是实现「Obsidian 写完自动传 GitHub」的核心，无需手动敲 Git 命令，插件全程代劳：</p>
+<ol>
+<li>打开 Obsidian→左下角设置→找到已安装的 Git 插件，进入配置页面；</li>
+<li>开启<strong>自动提交</strong>：找到<code>Auto commit-and-sync after stopping file edits</code>，打开开关，设置提交间隔为 5 分钟（停止编辑文章 5 分钟后自动提交本地修改）；</li>
+<li>开启<strong>自动推送</strong>：找到<code>Auto push interval (minutes)</code>，将数值改为 1-5 分钟（提交后自动推送到 GitHub 源仓库，别设为 0，否则不推送）；</li>
+<li>绑定分支：在插件顶部<code>Branch</code>选项中填写<code>main</code>，与远程分支保持一致。</li>
+</ol>
+<p>配置完成后，只要在 Obsidian 里编辑<code>source/_posts</code>下的文章，保存并停止编辑后，插件会自动完成「提交 + 推送」，无需任何手动操作。</p>
+<h3 id="（三）Hexo-自动部署配置"><a href="#（三）Hexo-自动部署配置" class="headerlink" title="（三）Hexo 自动部署配置"></a>（三）Hexo 自动部署配置</h3><p>实现源文件同步后，让 Hexo 自动把文章生成网页并推送到页面展示仓库：</p>
+<ol>
+<li>打开本地<code>soblog/_config.yml</code>文件，找到 deploy 配置项，确保配置如下：</li>
+</ol>
+<p>yaml</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:MetalSO/MetalSO.github.io.git # 页面展示仓库地址</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>本地安装 Hexo 部署插件（已安装可跳过）</li>
+</ol>
+<p>bash</p>
+<p>运行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>测试部署命令：终端执行<code>hexo g -d</code>，Hexo 会自动生成静态网页，并推送到<code>MetalSO.github.io</code>仓库，稍等 1-2 分钟，博客即可更新。</li>
+</ol>
+
+<p><img src="/.io//5.png"></p>
+<h2 id="四、完整自动化流程"><a href="#四、完整自动化流程" class="headerlink" title="四、完整自动化流程"></a>四、完整自动化流程</h2><p>配置完成后，后续发布博客只需三步，全程极简：</p>
+<ol>
+<li><strong>写文章</strong>：在 Obsidian 中新建<code>.md</code>文件，保存至<code>soblog/source/_posts/</code>目录，正常编辑内容；</li>
+<li><strong>等同步</strong>：停止编辑文章后，等待 5-10 分钟，Obsidian Git 自动将文章同步到 GitHub 源仓库；</li>
+<li><strong>触发部署</strong>：本地终端执行<code>hexo g -d</code>，或配置自动化脚本实现一键部署，Hexo 自动生成网页并更新线上博客。</li>
+</ol>
+<h2 id="五、常见问题避坑"><a href="#五、常见问题避坑" class="headerlink" title="五、常见问题避坑"></a>五、常见问题避坑</h2><ol>
+<li><strong>推送报错 502</strong>：GitHub 服务器临时故障，等待 5-10 分钟重试即可，无需修改本地配置；</li>
+<li><strong>自动同步不生效</strong>：检查 Obsidian Git 插件的自动推送间隔是否为 0、文章是否存放在<code>source/_posts</code>、分支是否绑定为 main；</li>
+<li><strong>博客未更新</strong>：确认执行了<code>hexo g -d</code>部署命令，检查页面展示仓库是否有新的静态文件，GitHub Pages 部署需 1-2 分钟延迟。</li>
+</ol>
+<h2 id="六、总结"><a href="#六、总结" class="headerlink" title="六、总结"></a>六、总结</h2><p>这套 Obsidian+Hexo 自动化部署方案，彻底解决了「手动写命令、手动传文件、手动部署」的繁琐流程，把精力完全放在内容创作上。只要做好前期的仓库和插件配置，就能实现「Obsidian 写完文章，自动同步 + 自动部署上线」，对于喜欢用 Obsidian 写作的 Hexo 博主来说，实用性拉满，再也不用为部署博客浪费时间啦！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://metalso.github.io/2026/03/11/obsidian%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2blog%E6%96%B9%E6%A1%88/" data-id="cuidKAnthEqUXww3fkZNHc4UN" data-title="obsidian自动部署blog" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/obsidian/" rel="tag">obsidian</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2026/03/12/PHP/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          PHP语法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2026/03/11/%E8%AF%B4%E4%BA%9B%E5%BF%83%E9%87%8C%E8%AF%9D/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">test</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/" rel="tag">PHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ctf/" rel="tag">ctf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/obsidian/" rel="tag">obsidian</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" rel="tag">注意事项</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/ctf/" style="font-size: 20px;">ctf</a> <a href="/tags/obsidian/" style="font-size: 10px;">obsidian</a> <a href="/tags/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" style="font-size: 10px;">注意事项</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/03/">三月 2026</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/03/12/imagetest/">imagetest</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/12/PHP/">PHP语法</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/11/obsidian%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2blog%E6%96%B9%E6%A1%88/">obsidian自动部署blog</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/11/%E8%AF%B4%E4%BA%9B%E5%BF%83%E9%87%8C%E8%AF%9D/">test</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/07/%E5%88%B6%E4%BD%9C%E7%B3%BB%E7%BB%9Fu%E7%9B%98%E6%97%B6%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">制作系统u盘时的注意事项</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 SO<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

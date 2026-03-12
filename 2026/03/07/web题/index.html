@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>web题 | SO的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="本文介绍ctf比赛中的web类问题。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web题">
+<meta property="og:url" content="https://metalso.github.io/2026/03/07/web%E9%A2%98/index.html">
+<meta property="og:site_name" content="SO的博客">
+<meta property="og:description" content="本文介绍ctf比赛中的web类问题。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-03-06T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-03-10T12:41:52.807Z">
+<meta property="article:author" content="SO">
+<meta property="article:tag" content="ctf">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="SO的博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">SO的博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">持续学习，持续输出</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://MetalSO.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-web题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/03/07/web%E9%A2%98/" class="article-date">
+  <time class="dt-published" datetime="2026-03-06T16:00:00.000Z" itemprop="datePublished">2026-03-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      web题
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="web题"><a href="#web题" class="headerlink" title="web题"></a>web题</h1><p><code>btoa()</code> 对原始密码进行 <strong>Base64 编码</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">encoded = btoa(encoded + &#x27;xH7jK&#x27;).slice(3);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在上一步结果后拼接字符串 <code>&#39;xH7jK&#39;</code>，</li>
+<li>再次 Base64 编码，</li>
+<li>然后取从第 3 个字符开始的子串（去掉前3个字符）。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">encoded = btoa(encoded.split(&#x27;&#x27;).reverse().join(&#x27;&#x27;));</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>将当前字符串<strong>反转</strong>（例如 <code>&quot;abc&quot;</code> → <code>&quot;cba&quot;</code>），</li>
+<li>再次 Base64 编码</li>
+</ul>
+<p>注意：Base64 字符串长度必须是 4 的倍数。</p>
+<h2 id="爆破"><a href="#爆破" class="headerlink" title="爆破"></a>爆破</h2><p>Authorization请求头用于验证是否有从服务器访问所需数据的权限。</p>
+<p>有些问题不知到用户名，只能先假设用户名为admin</p>
+<p><strong>多多看其他师傅的博客</strong></p>
+<p>打完ctf比赛的你肯定是想看writeup（答案）的，一般来说赛后过几天就会有很多师傅发出他的writeup，从比赛群、百度等途径都可以找到。多多看看其他师傅的解题思路，关注几个大牛，看看他们发的技术文章，都是很好的学习方法。</p>
+<h2 id="信息泄露"><a href="#信息泄露" class="headerlink" title="信息泄露"></a>信息泄露</h2><h3 id="log"><a href="#log" class="headerlink" title="log"></a>log</h3><ul>
+<li>git 泄露</li>
+<li>查看历史记录</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>切换版本</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>对比两次提交</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff</span><br></pre></td></tr></table></figure>
+
+<p><strong>1. 勘察战场：查看提交历史与分支</strong></p>
+<ul>
+<li><code>git log --oneline --all --graph</code><ul>
+<li><strong>作用</strong>：以简洁的方式查看<strong>所有分支</strong>的提交历史图谱。</li>
+<li><strong>CTF用途</strong>：快速发现出题人留下的“作案痕迹”，例如测试性提交、临时回滚、在<code>dev</code>或<code>flag</code>等非主流分支上的可疑提交。</li>
+</ul>
+</li>
+<li><code>git branch -a</code><ul>
+<li><strong>作用</strong>：列出所有（包括远程）分支。</li>
+<li><strong>CTF用途</strong>：直接找到隐藏的分支名称。Flag有时就在<code>flag</code>、<code>secret</code>这类分支上。</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. 深入分析：查看提交详情与差异</strong></p>
+<p>git reset切换版本</p>
+<ul>
+<li><code>git show &lt;commit_id&gt;</code><ul>
+<li><strong>作用</strong>：显示某次提交的详细信息，包括修改的文件和具体的代码差异（diff）。</li>
+<li><strong>CTF用途</strong>：仔细查看某次可疑提交究竟改了什么东西。Flag可能以注释、调试信息、硬编码密码的形式在修改中被添加或<strong>删除</strong>。</li>
+</ul>
+</li>
+<li><code>git diff &lt;commit_id_A&gt; &lt;commit_id_B&gt;</code><ul>
+<li><strong>作用</strong>：直接比较两次提交之间的差异。</li>
+<li><strong>CTF用途</strong>：专注于出题人可能刻意隐藏的变化，比如比较最初提交和最新提交，看看哪些“提示”被删除了。</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. 挖掘宝藏：找回丢失的文件与对象</strong><br>这是CTF中<strong>极为常见</strong>和<strong>重要</strong>的一步。</p>
+<ul>
+<li><code>git fsck --lost-found</code><ul>
+<li><strong>作用</strong>：检查仓库的完整性，并列出所有“悬空对象”（即不在任何提交历史中的对象，如被删除分支上的提交、被<code>git rm</code>删除后又<code>commit</code>的文件内容）。</li>
+<li><strong>CTF用例</strong>：执行此命令后，如果输出<code>dangling blob &lt;object_id&gt;</code>，那么恭喜，很可能找到了被删除的flag文件。</li>
+</ul>
+</li>
+<li><code>git show &lt;dangling_blob_object_id&gt;</code><ul>
+<li><strong>作用</strong>：直接查看这个悬空对象的内容。</li>
+<li><strong>CTF用例</strong>：查看被删除flag文件的内容。有时需要尝试多个<code>object_id</code>。</li>
+</ul>
+</li>
+</ul>
+<p><strong>4. 检查特殊状态与配置文件</strong></p>
+<ul>
+<li>检查是否处于“分离头指针”状态：<code>git status</code><ul>
+<li>有时出题人可能会让仓库处于一个特殊的临时状态，这里可能有线索。</li>
+</ul>
+</li>
+<li>检查<code>.git</code>目录本身：<code>cat .git/config</code> 或 <code>find .git -type f</code><ul>
+<li><code>.git/config</code> 文件中有时会包含敏感路径或服务器信息。</li>
+<li><code>.git</code>目录下有时会藏有额外的笔记或flag文件。</li>
+</ul>
+</li>
+</ul>
+<p>💎 高效技巧总结</p>
+<ul>
+<li><strong>组合拳</strong>：不要只运行一个命令。<code>git log</code> -&gt; <code>git show</code> -&gt; <code>git diff</code> -&gt; <code>git fsck</code> 是一个完整的侦查链条。</li>
+<li><strong>关键字搜索</strong>：在所有检出文件和历史记录中搜索<code>flag</code>、<code>key</code>、<code>pass</code>、<code>secret</code>等关键字：<code>grep -r &quot;flag{&quot; . 2&gt;/dev/null</code>。</li>
+<li><strong>理解出题意图</strong>：<code>.git</code>泄露题目的核心是考察“信息残留在版本控制中”。思考出题人可能在哪里“不小心”留下了flag。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://metalso.github.io/2026/03/07/web%E9%A2%98/" data-id="cuidsaaE93i0ryi4HuxRvDkKx" data-title="web题" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ctf/" rel="tag">ctf</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2026/03/07/sql%E6%B3%A8%E5%85%A5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          sql注入
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2026/03/07/%E5%A4%87%E8%B5%9B%E6%80%9D%E8%B7%AF/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">ctf比赛及备赛思路</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/" rel="tag">PHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ctf/" rel="tag">ctf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/obsidian/" rel="tag">obsidian</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" rel="tag">注意事项</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/ctf/" style="font-size: 20px;">ctf</a> <a href="/tags/obsidian/" style="font-size: 10px;">obsidian</a> <a href="/tags/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" style="font-size: 10px;">注意事项</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/03/">三月 2026</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/03/12/imagetest/">imagetest</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/12/PHP/">PHP语法</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/11/obsidian%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2blog%E6%96%B9%E6%A1%88/">obsidian自动部署blog</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/11/%E8%AF%B4%E4%BA%9B%E5%BF%83%E9%87%8C%E8%AF%9D/">test</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/07/%E5%88%B6%E4%BD%9C%E7%B3%BB%E7%BB%9Fu%E7%9B%98%E6%97%B6%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">制作系统u盘时的注意事项</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 SO<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
