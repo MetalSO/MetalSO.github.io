@@ -27,20 +27,13 @@
 <meta property="og:site_name" content="SO的博客">
 <meta property="og:description" content="Keil uVision 介绍一、Keil uVision 核心功能与作用Keil uVision 是由 Arm 公司（原 Keil 公司）开发的嵌入式系统集成开发环境（IDE），是 8051 单片机、Arm Cortex-M 系列微控制器开发的经典工具，覆盖从代码编写到硬件部署的全流程。 1. 全流程开发集成 整合代码编辑、编译、链接、调试、程序烧录于一体，无需在多个工具间切换，完整覆盖嵌入式">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://metalso.github.io/2026/03/14/STC89C52RC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88keil%20uvision%EF%BC%89/file-20260314112656919.png">
-<meta property="og:image" content="https://metalso.github.io/2026/03/14/STC89C52RC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88keil%20uvision%EF%BC%89/file-20260314214837100.png">
-<meta property="og:image" content="https://metalso.github.io/2026/03/14/STC89C52RC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88keil%20uvision%EF%BC%89/file-20260314215006230.png">
-<meta property="og:image" content="https://metalso.github.io/2026/03/14/STC89C52RC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88keil%20uvision%EF%BC%89/file-20260314215723036.png">
-<meta property="og:image" content="https://metalso.github.io/2026/03/14/STC89C52RC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88keil%20uvision%EF%BC%89/file-20260314215744453.png">
-<meta property="og:image" content="https://metalso.github.io/2026/03/14/STC89C52RC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88keil%20uvision%EF%BC%89/file-20260314215755970.png">
-<meta property="og:image" content="https://metalso.github.io/2026/03/14/STC89C52RC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88keil%20uvision%EF%BC%89/file-20260314215803992.png">
-<meta property="og:image" content="https://metalso.github.io/2026/03/14/STC89C52RC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88keil%20uvision%EF%BC%89/file-20260314215906780.png">
+<meta property="og:image" content="https://metalso.github.io/images/avatar.png">
 <meta property="article:published_time" content="2026-03-14T02:26:24.000Z">
 <meta property="article:modified_time" content="2026-03-15T02:30:43.776Z">
 <meta property="article:author" content="SO">
 <meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://metalso.github.io/2026/03/14/STC89C52RC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88keil%20uvision%EF%BC%89/file-20260314112656919.png">
+<meta name="twitter:image" content="https://metalso.github.io/images/avatar.png">
   
   
   
@@ -53,16 +46,18 @@
 
 
   
+    <link rel="shortcut icon" href="/images/avatar.png">
+  
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"SO","sameAs":[]},"dateCreated":"2026-03-14T10:26:24+08:00","dateModified":"2026-03-15T10:30:43+08:00","datePublished":"2026-03-14T10:26:24+08:00","description":"","headline":"STC89C52RC学习笔记（keil uvision）","mainEntityOfPage":{"@type":"WebPage","@id":"https://metalso.github.io/2026/03/14/STC89C52RC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88keil%20uvision%EF%BC%89/"},"publisher":{"@type":"Organization","name":"SO","sameAs":[]},"url":"https://metalso.github.io/2026/03/14/STC89C52RC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88keil%20uvision%EF%BC%89/","keywords":"学习笔记","image":[]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"SO","sameAs":[],"image":"https://MetalSO.github.io/images/avatar.png"},"dateCreated":"2026-03-14T10:26:24+08:00","dateModified":"2026-03-15T10:30:43+08:00","datePublished":"2026-03-14T10:26:24+08:00","description":"","headline":"STC89C52RC学习笔记（keil uvision）","mainEntityOfPage":{"@type":"WebPage","@id":"https://metalso.github.io/2026/03/14/STC89C52RC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88keil%20uvision%EF%BC%89/"},"publisher":{"@type":"Organization","name":"SO","sameAs":[],"image":"https://MetalSO.github.io/images/avatar.png","logo":{"@type":"ImageObject","url":"https://MetalSO.github.io/images/avatar.png"}},"url":"https://metalso.github.io/2026/03/14/STC89C52RC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88keil%20uvision%EF%BC%89/","keywords":"学习笔记","image":[]}</script>
   
 </head>
 <body><div id="l_cover"></div><div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
 
 
-<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="undefined" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">SO的博客</div><div class="sub cap">持续学习，持续输出</div></a></div></header>
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">SO的博客</div></a></div></header>
 
 <div class="nav-area">
 
