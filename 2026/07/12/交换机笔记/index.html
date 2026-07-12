@@ -28,8 +28,8 @@
 <meta property="og:description" content="交换机的类型一、按工作层次分类 二层 三层  二、按应用场景分类 超小型企业网 傻瓜式交换机（即插即用） 小型企业网 smb交换机 中大型企业网 有专业IT系统   ARP 地址解析协议 VLAN 虚拟局域网  交换机如何知道哪一台主机对应什么IP地址呢？当需要进行数据传输时主机A通过广播的形式向域内所有主机询问IP地址，之后被询问的主机回复">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://metalso.github.io/images/avatar.png">
-<meta property="article:published_time" content="2026-07-12T08:08:58.000Z">
-<meta property="article:modified_time" content="2026-07-12T08:14:16.801Z">
+<meta property="article:published_time" content="2026-07-12T08:31:51.000Z">
+<meta property="article:modified_time" content="2026-07-12T08:31:58.416Z">
 <meta property="article:author" content="SO">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://metalso.github.io/images/avatar.png">
@@ -50,7 +50,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"SO","sameAs":[],"image":"https://MetalSO.github.io/images/avatar.png"},"dateCreated":"2026-07-12T16:08:58+08:00","dateModified":"2026-07-12T16:14:16+08:00","datePublished":"2026-07-12T16:08:58+08:00","description":"","headline":"交换机笔记","mainEntityOfPage":{"@type":"WebPage","@id":"https://metalso.github.io/2026/07/12/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%AC%94%E8%AE%B0/"},"publisher":{"@type":"Organization","name":"SO","sameAs":[],"image":"https://MetalSO.github.io/images/avatar.png","logo":{"@type":"ImageObject","url":"https://MetalSO.github.io/images/avatar.png"}},"url":"https://metalso.github.io/2026/07/12/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%AC%94%E8%AE%B0/","image":[]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"SO","sameAs":[],"image":"https://MetalSO.github.io/images/avatar.png"},"dateCreated":"2026-07-12T16:31:51+08:00","dateModified":"2026-07-12T16:31:58+08:00","datePublished":"2026-07-12T16:31:51+08:00","description":"","headline":"交换机笔记","mainEntityOfPage":{"@type":"WebPage","@id":"https://metalso.github.io/2026/07/12/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%AC%94%E8%AE%B0/"},"publisher":{"@type":"Organization","name":"SO","sameAs":[],"image":"https://MetalSO.github.io/images/avatar.png","logo":{"@type":"ImageObject","url":"https://MetalSO.github.io/images/avatar.png"}},"url":"https://metalso.github.io/2026/07/12/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%AC%94%E8%AE%B0/","image":[]}</script>
   
 </head>
 <body><div id="l_cover"></div><div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
@@ -67,7 +67,7 @@
 
 
 
-<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2026/07/12/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%AC%94%E8%AE%B0/"><span class="title">交换机笔记</span></a><a class="item title" href="/2026/03/10/Templates/hexo/"><span class="title">{{title}}</span></a><a class="item title" href="/2026/06/03/%E7%BD%91%E5%AE%89%E7%BA%A2%E9%98%9F%E7%AC%94%E8%AE%B0/"><span class="title">网安红队笔记</span></a><a class="item title" href="/2026/07/09/Linux%E7%AC%94%E8%AE%B0/"><span class="title">Linux笔记</span></a><a class="item title" href="/2026/03/07/CTF%E5%A4%87%E8%B5%9B%E6%80%9D%E8%B7%AF/"><span class="title">ctf比赛及备赛思路</span></a><a class="item title" href="/2026/03/07/sql%E6%B3%A8%E5%85%A5/"><span class="title">sql注入</span></a><a class="item title" href="/2026/03/11/obsidian%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2blog%E6%96%B9%E6%A1%88/"><span class="title">obsidian自动部署blog</span></a><a class="item title" href="/2026/03/07/Misc/"><span class="title">Misc题</span></a><a class="item title" href="/2026/06/06/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A/"><span class="title">渗透测试报告</span></a><a class="item title" href="/2026/03/14/STC89C52RC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88keil%20uvision%EF%BC%89/"><span class="title">STC89C52RC学习笔记（keil uvision）</span></a></div></widget>
+<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2026/07/12/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%AC%94%E8%AE%B0/"><span class="title">交换机笔记</span></a><a class="item title" href="/2026/03/10/Templates/hexo/hexo/"><span class="title">{{title}}</span></a><a class="item title" href="/2026/06/03/%E7%BD%91%E5%AE%89%E7%BA%A2%E9%98%9F%E7%AC%94%E8%AE%B0/"><span class="title">网安红队笔记</span></a><a class="item title" href="/2026/07/09/Linux%E7%AC%94%E8%AE%B0/"><span class="title">Linux笔记</span></a><a class="item title" href="/2026/03/07/CTF%E5%A4%87%E8%B5%9B%E6%80%9D%E8%B7%AF/"><span class="title">ctf比赛及备赛思路</span></a><a class="item title" href="/2026/03/07/sql%E6%B3%A8%E5%85%A5/"><span class="title">sql注入</span></a><a class="item title" href="/2026/03/11/obsidian%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2blog%E6%96%B9%E6%A1%88/"><span class="title">obsidian自动部署blog</span></a><a class="item title" href="/2026/03/07/Misc/"><span class="title">Misc题</span></a><a class="item title" href="/2026/06/06/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A/"><span class="title">渗透测试报告</span></a><a class="item title" href="/2026/03/14/STC89C52RC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88keil%20uvision%EF%BC%89/"><span class="title">STC89C52RC学习笔记（keil uvision）</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -80,7 +80,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-07-12T08:08:58.000Z">2026-07-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-07-12T08:14:16.801Z">2026-07-12</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-07-12T08:31:51.000Z">2026-07-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-07-12T08:31:58.416Z">2026-07-12</time></span></div></div></div>
     
     <div class="bottom only-title">
       
