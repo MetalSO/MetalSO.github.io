@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.1" theme-name="Stellar" theme-version="1.33.1">
   
-  
+  <meta name="robots" content="noindex,follow">
   <meta name="generator" content="Hexo 8.1.1">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   
@@ -17,27 +17,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
-  <title>web题 - SO的博客</title>
+  <title>分类：杂文 - SO的博客</title>
 
   
-    <meta name="description" content="本文介绍ctf比赛中的web类问题。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="web题">
-<meta property="og:url" content="https://metalso.github.io/2026/03/07/web%E9%A2%98/">
+    <meta name="description" content="锻炼体魄，磨砺精神">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SO的博客">
+<meta property="og:url" content="https://metalso.github.io/categories/%E6%9D%82%E6%96%87/">
 <meta property="og:site_name" content="SO的博客">
-<meta property="og:description" content="本文介绍ctf比赛中的web类问题。">
+<meta property="og:description" content="锻炼体魄，磨砺精神">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://metalso.github.io/images/avatar.png">
-<meta property="article:published_time" content="2026-03-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-03-15T05:25:36.188Z">
 <meta property="article:author" content="SO">
-<meta property="article:tag" content="ctf">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://metalso.github.io/images/avatar.png">
   
   
   
-  <meta name="keywords" content="ctf">
+  
 
   <!-- feed -->
   
@@ -51,10 +48,10 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"SO","sameAs":[],"image":"https://MetalSO.github.io/images/avatar.png"},"dateCreated":"2026-03-07T00:00:00+08:00","dateModified":"2026-03-15T13:25:36+08:00","datePublished":"2026-03-07T00:00:00+08:00","description":"本文介绍ctf比赛中的web类问题。","headline":"web题","mainEntityOfPage":{"@type":"WebPage","@id":"https://metalso.github.io/2026/03/07/web%E9%A2%98/"},"publisher":{"@type":"Organization","name":"SO","sameAs":[],"image":"https://MetalSO.github.io/images/avatar.png","logo":{"@type":"ImageObject","url":"https://MetalSO.github.io/images/avatar.png"}},"url":"https://metalso.github.io/2026/03/07/web%E9%A2%98/","keywords":"ctf","image":[]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Website","@id":"https://MetalSO.github.io","author":{"@type":"Person","name":"SO","sameAs":[],"image":"https://MetalSO.github.io/images/avatar.png"},"name":"SO的博客","description":"锻炼体魄，磨砺精神","url":"https://MetalSO.github.io"}</script>
   
 </head>
-<body><div id="l_cover"></div><div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
+<body><div id="l_cover"></div><div class="l_body index" id="start" layout="undefined" type="undefined" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
 
 
 <header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">SO的博客</div><div class="sub normal cap">持续学习，持续输出</div><div class="sub hover cap" style="opacity:0"> El Psy Congroo</div></a></div></header>
@@ -66,151 +63,27 @@
 <div class="widgets">
 <div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
 
-
-
-<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2026/07/12/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%AC%94%E8%AE%B0/"><span class="title">交换机笔记</span></a><a class="item title" href="/2026/06/03/%E7%BD%91%E5%AE%89%E7%BA%A2%E9%98%9F%E7%AC%94%E8%AE%B0/"><span class="title">网安红队笔记</span></a><a class="item title" href="/2026/07/09/Linux%E7%AC%94%E8%AE%B0/"><span class="title">Linux笔记</span></a><a class="item title" href="/2026/03/07/CTF%E5%A4%87%E8%B5%9B%E6%80%9D%E8%B7%AF/"><span class="title">ctf比赛及备赛思路</span></a><a class="item title" href="/2026/03/07/sql%E6%B3%A8%E5%85%A5/"><span class="title">sql注入</span></a><a class="item title" href="/2026/03/11/obsidian%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2blog%E6%96%B9%E6%A1%88/"><span class="title">obsidian自动部署blog</span></a><a class="item title" href="/2026/03/07/Misc/"><span class="title">Misc题</span></a><a class="item title" href="/2026/06/06/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A/"><span class="title">渗透测试报告</span></a><a class="item title" href="/2026/03/14/STC89C52RC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88keil%20uvision%EF%BC%89/"><span class="title">STC89C52RC学习笔记（keil uvision）</span></a><a class="item title" href="/2026/03/30/%E4%B9%89%E5%92%8C%E5%9B%A2%E6%94%B9%E7%BC%96%E5%89%A7%E6%9C%AC%EF%BC%88%E9%9D%9E%E7%9C%9F%E5%AE%9E%E5%8E%86%E5%8F%B2%EF%BC%89/"><span class="title">义和团改编剧本（非真实历史）</span></a></div></widget>
+<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2026/03/30/%E4%B9%89%E5%92%8C%E5%9B%A2%E6%94%B9%E7%BC%96%E5%89%A7%E6%9C%AC%EF%BC%88%E9%9D%9E%E7%9C%9F%E5%AE%9E%E5%8E%86%E5%8F%B2%EF%BC%89/"><span class="title">义和团改编剧本（非真实历史）</span></a><a class="item title" href="/2026/07/12/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%AC%94%E8%AE%B0/"><span class="title">交换机笔记</span></a><a class="item title" href="/2026/06/06/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A/"><span class="title">渗透测试报告</span></a><a class="item title" href="/2026/07/09/Linux%E7%AC%94%E8%AE%B0/"><span class="title">Linux笔记</span></a><a class="item title" href="/2026/06/03/%E7%BD%91%E5%AE%89%E7%BA%A2%E9%98%9F%E7%AC%94%E8%AE%B0/"><span class="title">网安红队笔记</span></a><a class="item title" href="/2026/03/07/CTF%E5%A4%87%E8%B5%9B%E6%80%9D%E8%B7%AF/"><span class="title">ctf比赛及备赛思路</span></a><a class="item title" href="/2026/03/07/CTF/sql%E6%B3%A8%E5%85%A5/"><span class="title">sql注入</span></a><a class="item title" href="/2026/03/11/obsidian%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2blog%E6%96%B9%E6%A1%88/"><span class="title">obsidian自动部署blog</span></a><a class="item title" href="/2026/03/07/CTF/Misc/"><span class="title">Misc题</span></a><a class="item title" href="/2026/03/14/STC89C52RC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88keil%20uvision%EF%BC%89/"><span class="title">STC89C52RC学习笔记（keil uvision）</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
 
+<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/avatar.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">SO的博客</div><div class="sub normal cap">持续学习，持续输出</div><div class="sub hover cap" style="opacity:0"> El Psy Congroo</div></a></div></header>
+
+ 
 
 
 
 
-<div class="article banner top">
-  <div class="content">
-    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
-<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/%E6%8A%80%E6%9C%AF/CTF/">CTF</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-03-06T16:00:00.000Z">2026-03-07</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-03-15T05:25:36.188Z">2026-03-15</time></span></div></div></div>
-    
-    <div class="bottom only-title">
-      
-      <div class="text-area">
-        <h1 class="text title"><span>web题</span></h1>
-        
-      </div>
-    </div>
-    
-  </div>
-  </div><article class="md-text content"><h1 id="web题"><a href="#web题" class="headerlink" title="web题"></a>web题</h1><p><code>btoa()</code> 对原始密码进行 <strong>Base64 编码</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">encoded = btoa(encoded + &#x27;xH7jK&#x27;).slice(3);</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>在上一步结果后拼接字符串 <code>&#39;xH7jK&#39;</code>，</li>
-<li>再次 Base64 编码，</li>
-<li>然后取从第 3 个字符开始的子串（去掉前3个字符）。</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">encoded = btoa(encoded.split(&#x27;&#x27;).reverse().join(&#x27;&#x27;));</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>将当前字符串<strong>反转</strong>（例如 <code>&quot;abc&quot;</code> → <code>&quot;cba&quot;</code>），</li>
-<li>再次 Base64 编码</li>
-</ul>
-<p>注意：Base64 字符串长度必须是 4 的倍数。</p>
-<h2 id="爆破"><a href="#爆破" class="headerlink" title="爆破"></a>爆破</h2><p>Authorization请求头用于验证是否有从服务器访问所需数据的权限。</p>
-<p>有些问题不知到用户名，只能先假设用户名为admin</p>
-<p><strong>多多看其他师傅的博客</strong></p>
-<p>打完ctf比赛的你肯定是想看writeup（答案）的，一般来说赛后过几天就会有很多师傅发出他的writeup，从比赛群、百度等途径都可以找到。多多看看其他师傅的解题思路，关注几个大牛，看看他们发的技术文章，都是很好的学习方法。</p>
-<h2 id="信息泄露"><a href="#信息泄露" class="headerlink" title="信息泄露"></a>信息泄露</h2><h3 id="log"><a href="#log" class="headerlink" title="log"></a>log</h3><ul>
-<li>git 泄露</li>
-<li>查看历史记录</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>切换版本</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>对比两次提交</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff</span><br></pre></td></tr></table></figure>
-
-<p><strong>1. 勘察战场：查看提交历史与分支</strong></p>
-<ul>
-<li><code>git log --oneline --all --graph</code><ul>
-<li><strong>作用</strong>：以简洁的方式查看<strong>所有分支</strong>的提交历史图谱。</li>
-<li><strong>CTF用途</strong>：快速发现出题人留下的“作案痕迹”，例如测试性提交、临时回滚、在<code>dev</code>或<code>flag</code>等非主流分支上的可疑提交。</li>
-</ul>
-</li>
-<li><code>git branch -a</code><ul>
-<li><strong>作用</strong>：列出所有（包括远程）分支。</li>
-<li><strong>CTF用途</strong>：直接找到隐藏的分支名称。Flag有时就在<code>flag</code>、<code>secret</code>这类分支上。</li>
-</ul>
-</li>
-</ul>
-<p><strong>2. 深入分析：查看提交详情与差异</strong></p>
-<p>git reset切换版本</p>
-<ul>
-<li><code>git show &lt;commit_id&gt;</code><ul>
-<li><strong>作用</strong>：显示某次提交的详细信息，包括修改的文件和具体的代码差异（diff）。</li>
-<li><strong>CTF用途</strong>：仔细查看某次可疑提交究竟改了什么东西。Flag可能以注释、调试信息、硬编码密码的形式在修改中被添加或<strong>删除</strong>。</li>
-</ul>
-</li>
-<li><code>git diff &lt;commit_id_A&gt; &lt;commit_id_B&gt;</code><ul>
-<li><strong>作用</strong>：直接比较两次提交之间的差异。</li>
-<li><strong>CTF用途</strong>：专注于出题人可能刻意隐藏的变化，比如比较最初提交和最新提交，看看哪些“提示”被删除了。</li>
-</ul>
-</li>
-</ul>
-<p><strong>3. 挖掘宝藏：找回丢失的文件与对象</strong><br>这是CTF中<strong>极为常见</strong>和<strong>重要</strong>的一步。</p>
-<ul>
-<li><code>git fsck --lost-found</code><ul>
-<li><strong>作用</strong>：检查仓库的完整性，并列出所有“悬空对象”（即不在任何提交历史中的对象，如被删除分支上的提交、被<code>git rm</code>删除后又<code>commit</code>的文件内容）。</li>
-<li><strong>CTF用例</strong>：执行此命令后，如果输出<code>dangling blob &lt;object_id&gt;</code>，那么恭喜，很可能找到了被删除的flag文件。</li>
-</ul>
-</li>
-<li><code>git show &lt;dangling_blob_object_id&gt;</code><ul>
-<li><strong>作用</strong>：直接查看这个悬空对象的内容。</li>
-<li><strong>CTF用例</strong>：查看被删除flag文件的内容。有时需要尝试多个<code>object_id</code>。</li>
-</ul>
-</li>
-</ul>
-<p><strong>4. 检查特殊状态与配置文件</strong></p>
-<ul>
-<li>检查是否处于“分离头指针”状态：<code>git status</code><ul>
-<li>有时出题人可能会让仓库处于一个特殊的临时状态，这里可能有线索。</li>
-</ul>
-</li>
-<li>检查<code>.git</code>目录本身：<code>cat .git/config</code> 或 <code>find .git -type f</code><ul>
-<li><code>.git/config</code> 文件中有时会包含敏感路径或服务器信息。</li>
-<li><code>.git</code>目录下有时会藏有额外的笔记或flag文件。</li>
-</ul>
-</li>
-</ul>
-<p>💎 高效技巧总结</p>
-<ul>
-<li><strong>组合拳</strong>：不要只运行一个命令。<code>git log</code> -&gt; <code>git show</code> -&gt; <code>git diff</code> -&gt; <code>git fsck</code> 是一个完整的侦查链条。</li>
-<li><strong>关键字搜索</strong>：在所有检出文件和历史记录中搜索<code>flag</code>、<code>key</code>、<code>pass</code>、<code>secret</code>等关键字：<code>grep -r &quot;flag{&quot; . 2&gt;/dev/null</code>。</li>
-<li><strong>理解出题意图</strong>：<code>.git</code>泄露题目的核心是考察“信息残留在版本控制中”。思考出题人可能在哪里“不小心”留下了flag。</li>
-</ul>
-</article>
-<div class="article-footer">
-    <section id="license">
-      <div class="header"><span>许可协议</span></div>
-      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
-</div>
-    </section>
-    
-
-</div>
-
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2026/03/07/sql%E6%B3%A8%E5%85%A5/">sql注入</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2026/03/07/CTF%E5%A4%87%E8%B5%9B%E6%80%9D%E8%B7%AF/">ctf比赛及备赛思路</a></div></section></div>
-
-
-
-
+<div class="navbar top"><div class="navbar-blur"><div class="navbar-container"><nav class="post"><a href="/">近期发布</a><a class="active" href="/categories/">分类：杂文</a><a href="/tags/">标签</a><a href="/archives/">归档</a></nav></div></div></div>
+<div class="post-list post"><div class="post-card-wrap"><a class="post-card post" href="/2026/03/30/%E4%B9%89%E5%92%8C%E5%9B%A2%E6%94%B9%E7%BC%96%E5%89%A7%E6%9C%AC%EF%BC%88%E9%9D%9E%E7%9C%9F%E5%AE%9E%E5%8E%86%E5%8F%B2%EF%BC%89/">
+<article class="md-text"><h2 class="post-title">义和团改编剧本（非真实历史）</h2><div class="excerpt"><p>自创的义和团历史背景的故事</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2026-03-30T10:43:14.000Z">2026-03-30</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>杂文</span></span></div></article>
+</a></div></div>
 
 
 <footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">SO</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.33.1">Stellar 1.33.1</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
-<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right"><div class="widgets">
-
-
-
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#web%E9%A2%98"><span class="toc-text">web题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%86%E7%A0%B4"><span class="toc-text">爆破</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2"><span class="toc-text">信息泄露</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#log"><span class="toc-text">log</span></a></li></ol></li></ol></li></ol></div><div class="widget-footer"><a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/><path d="M7 3.338A9.95 9.95 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/></g></svg><span>回到顶部</span></a></div></widget>
-</div></aside><div class='float-panel'>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right"></aside><div class='float-panel'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
   </button>
@@ -223,7 +96,7 @@
 
 <script type="text/javascript">
   window.canonical = {"closeEnable":true,"closeText":"关闭提示","originalHost":null,"officialHosts":["localhost"],"encoded":""};
-  window.canonical["param"] = {"permalink":"https://metalso.github.io/2026/03/07/web%E9%A2%98/","checklink":"/js/plugins/video.js"};
+  window.canonical["param"] = {"permalink":null,"checklink":"/js/plugins/video.js"};
   // Fix: Ensure page is at the correct top position on data load
   if (history.scrollRestoration) {
     history.scrollRestoration = 'auto';

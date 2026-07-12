@@ -23,7 +23,7 @@
     <meta name="description" content="本文介绍网络安全中的sql注入问题。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sql注入">
-<meta property="og:url" content="https://metalso.github.io/2026/03/07/sql%E6%B3%A8%E5%85%A5/">
+<meta property="og:url" content="https://metalso.github.io/2026/03/07/CTF/sql%E6%B3%A8%E5%85%A5/">
 <meta property="og:site_name" content="SO的博客">
 <meta property="og:description" content="本文介绍网络安全中的sql注入问题。">
 <meta property="og:locale" content="zh_CN">
@@ -52,7 +52,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"SO","sameAs":[],"image":"https://MetalSO.github.io/images/avatar.png"},"dateCreated":"2026-03-07T00:00:00+08:00","dateModified":"2026-07-09T20:37:33+08:00","datePublished":"2026-03-07T00:00:00+08:00","description":"本文介绍网络安全中的sql注入问题。","headline":"sql注入","mainEntityOfPage":{"@type":"WebPage","@id":"https://metalso.github.io/2026/03/07/sql%E6%B3%A8%E5%85%A5/"},"publisher":{"@type":"Organization","name":"SO","sameAs":[],"image":"https://MetalSO.github.io/images/avatar.png","logo":{"@type":"ImageObject","url":"https://MetalSO.github.io/images/avatar.png"}},"url":"https://metalso.github.io/2026/03/07/sql%E6%B3%A8%E5%85%A5/","keywords":"ctf, 网安","image":[]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"SO","sameAs":[],"image":"https://MetalSO.github.io/images/avatar.png"},"dateCreated":"2026-03-07T00:00:00+08:00","dateModified":"2026-07-09T20:37:33+08:00","datePublished":"2026-03-07T00:00:00+08:00","description":"本文介绍网络安全中的sql注入问题。","headline":"sql注入","mainEntityOfPage":{"@type":"WebPage","@id":"https://metalso.github.io/2026/03/07/CTF/sql%E6%B3%A8%E5%85%A5/"},"publisher":{"@type":"Organization","name":"SO","sameAs":[],"image":"https://MetalSO.github.io/images/avatar.png","logo":{"@type":"ImageObject","url":"https://MetalSO.github.io/images/avatar.png"}},"url":"https://metalso.github.io/2026/03/07/CTF/sql%E6%B3%A8%E5%85%A5/","keywords":"ctf, 网安","image":[]}</script>
   
 </head>
 <body><div id="l_cover"></div><div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
@@ -69,7 +69,7 @@
 
 
 
-<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2026/07/12/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%AC%94%E8%AE%B0/"><span class="title">交换机笔记</span></a><a class="item title" href="/2026/06/03/%E7%BD%91%E5%AE%89%E7%BA%A2%E9%98%9F%E7%AC%94%E8%AE%B0/"><span class="title">网安红队笔记</span></a><a class="item title" href="/2026/07/09/Linux%E7%AC%94%E8%AE%B0/"><span class="title">Linux笔记</span></a><a class="item title" href="/2026/03/07/CTF%E5%A4%87%E8%B5%9B%E6%80%9D%E8%B7%AF/"><span class="title">ctf比赛及备赛思路</span></a><a class="item title" href="/2026/03/07/sql%E6%B3%A8%E5%85%A5/"><span class="title">sql注入</span></a><a class="item title" href="/2026/03/11/obsidian%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2blog%E6%96%B9%E6%A1%88/"><span class="title">obsidian自动部署blog</span></a><a class="item title" href="/2026/03/07/Misc/"><span class="title">Misc题</span></a><a class="item title" href="/2026/06/06/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A/"><span class="title">渗透测试报告</span></a><a class="item title" href="/2026/03/14/STC89C52RC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88keil%20uvision%EF%BC%89/"><span class="title">STC89C52RC学习笔记（keil uvision）</span></a><a class="item title" href="/2026/03/30/%E4%B9%89%E5%92%8C%E5%9B%A2%E6%94%B9%E7%BC%96%E5%89%A7%E6%9C%AC%EF%BC%88%E9%9D%9E%E7%9C%9F%E5%AE%9E%E5%8E%86%E5%8F%B2%EF%BC%89/"><span class="title">义和团改编剧本（非真实历史）</span></a></div></widget>
+<widget class="widget-wrapper recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2026/03/30/%E4%B9%89%E5%92%8C%E5%9B%A2%E6%94%B9%E7%BC%96%E5%89%A7%E6%9C%AC%EF%BC%88%E9%9D%9E%E7%9C%9F%E5%AE%9E%E5%8E%86%E5%8F%B2%EF%BC%89/"><span class="title">义和团改编剧本（非真实历史）</span></a><a class="item title" href="/2026/07/12/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%AC%94%E8%AE%B0/"><span class="title">交换机笔记</span></a><a class="item title" href="/2026/06/06/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A/"><span class="title">渗透测试报告</span></a><a class="item title" href="/2026/07/09/Linux%E7%AC%94%E8%AE%B0/"><span class="title">Linux笔记</span></a><a class="item title" href="/2026/06/03/%E7%BD%91%E5%AE%89%E7%BA%A2%E9%98%9F%E7%AC%94%E8%AE%B0/"><span class="title">网安红队笔记</span></a><a class="item title" href="/2026/03/07/CTF%E5%A4%87%E8%B5%9B%E6%80%9D%E8%B7%AF/"><span class="title">ctf比赛及备赛思路</span></a><a class="item title" href="/2026/03/07/CTF/sql%E6%B3%A8%E5%85%A5/"><span class="title">sql注入</span></a><a class="item title" href="/2026/03/11/obsidian%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2blog%E6%96%B9%E6%A1%88/"><span class="title">obsidian自动部署blog</span></a><a class="item title" href="/2026/03/07/CTF/Misc/"><span class="title">Misc题</span></a><a class="item title" href="/2026/03/14/STC89C52RC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88keil%20uvision%EF%BC%89/"><span class="title">STC89C52RC学习笔记（keil uvision）</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -117,7 +117,7 @@
 
 </div>
 
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2026/03/07/Misc/">Misc题</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2026/03/07/web%E9%A2%98/">web题</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2026/03/07/CTF%E5%A4%87%E8%B5%9B%E6%80%9D%E8%B7%AF/">ctf比赛及备赛思路</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2026/03/07/CTF/Misc/">Misc题</a></div></section></div>
 
 
 
@@ -144,7 +144,7 @@
 
 <script type="text/javascript">
   window.canonical = {"closeEnable":true,"closeText":"关闭提示","originalHost":null,"officialHosts":["localhost"],"encoded":""};
-  window.canonical["param"] = {"permalink":"https://metalso.github.io/2026/03/07/sql%E6%B3%A8%E5%85%A5/","checklink":"/js/plugins/video.js"};
+  window.canonical["param"] = {"permalink":"https://metalso.github.io/2026/03/07/CTF/sql%E6%B3%A8%E5%85%A5/","checklink":"/js/plugins/video.js"};
   // Fix: Ensure page is at the correct top position on data load
   if (history.scrollRestoration) {
     history.scrollRestoration = 'auto';
