@@ -20,16 +20,16 @@
   <title>宇树机器狗 - SO的博客</title>
 
   
-    <meta name="description" content="机械臂链路启动 机械臂使能打开一个终端 输入：1cd &#x2F;home&#x2F;unitree&#x2F;ARX_X5&#x2F;00-sh&#x2F;ROS2  1bash 04single_arm.sh    输入密码（123）   观察机械臂是否还有红灯且能否晃动，使能成功全是绿灯且不能晃动,失败就 ctrl c 停掉,再输入bash 04single_arm.sh,输入密码（123）,再跑一遍,一般启动两遍即可2. 机械臂一键启动脚">
+    <meta name="description" content="机械臂链路启动 机械臂使能  1cd &#x2F;home&#x2F;unitree&#x2F;ARX_X5&#x2F;00-sh&#x2F;ROS2  1bash 04single_arm.sh    输入密码（123）   观察机械臂是否还有红灯且能否晃动，使能成功全是绿灯且不能晃动,失败就 ctrl c 停掉,再输入bash 04single_arm.sh,输入密码（123）,再跑一遍,一般启动两遍即可2. 机械臂一键启动脚本 1bash">
 <meta property="og:type" content="article">
 <meta property="og:title" content="宇树机器狗">
 <meta property="og:url" content="https://metalso.github.io/2026/09/15/%E5%AE%87%E6%A0%91%E6%9C%BA%E5%99%A8%E7%8B%97/">
 <meta property="og:site_name" content="SO的博客">
-<meta property="og:description" content="机械臂链路启动 机械臂使能打开一个终端 输入：1cd &#x2F;home&#x2F;unitree&#x2F;ARX_X5&#x2F;00-sh&#x2F;ROS2  1bash 04single_arm.sh    输入密码（123）   观察机械臂是否还有红灯且能否晃动，使能成功全是绿灯且不能晃动,失败就 ctrl c 停掉,再输入bash 04single_arm.sh,输入密码（123）,再跑一遍,一般启动两遍即可2. 机械臂一键启动脚">
+<meta property="og:description" content="机械臂链路启动 机械臂使能  1cd &#x2F;home&#x2F;unitree&#x2F;ARX_X5&#x2F;00-sh&#x2F;ROS2  1bash 04single_arm.sh    输入密码（123）   观察机械臂是否还有红灯且能否晃动，使能成功全是绿灯且不能晃动,失败就 ctrl c 停掉,再输入bash 04single_arm.sh,输入密码（123）,再跑一遍,一般启动两遍即可2. 机械臂一键启动脚本 1bash">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://metalso.github.io/images/avatar.png">
 <meta property="article:published_time" content="2026-09-15T13:12:08.000Z">
-<meta property="article:modified_time" content="2026-09-15T13:12:15.189Z">
+<meta property="article:modified_time" content="2026-09-15T13:51:53.154Z">
 <meta property="article:author" content="SO">
 <meta property="article:tag" content="ROS">
 <meta name="twitter:card" content="summary">
@@ -51,7 +51,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"SO","sameAs":[],"image":"https://MetalSO.github.io/images/avatar.png"},"dateCreated":"2026-09-15T21:12:08+08:00","dateModified":"2026-09-15T21:12:15+08:00","datePublished":"2026-09-15T21:12:08+08:00","description":"","headline":"宇树机器狗","mainEntityOfPage":{"@type":"WebPage","@id":"https://metalso.github.io/2026/09/15/%E5%AE%87%E6%A0%91%E6%9C%BA%E5%99%A8%E7%8B%97/"},"publisher":{"@type":"Organization","name":"SO","sameAs":[],"image":"https://MetalSO.github.io/images/avatar.png","logo":{"@type":"ImageObject","url":"https://MetalSO.github.io/images/avatar.png"}},"url":"https://metalso.github.io/2026/09/15/%E5%AE%87%E6%A0%91%E6%9C%BA%E5%99%A8%E7%8B%97/","keywords":"ROS","image":[]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"SO","sameAs":[],"image":"https://MetalSO.github.io/images/avatar.png"},"dateCreated":"2026-09-15T21:12:08+08:00","dateModified":"2026-09-15T21:51:53+08:00","datePublished":"2026-09-15T21:12:08+08:00","description":"","headline":"宇树机器狗","mainEntityOfPage":{"@type":"WebPage","@id":"https://metalso.github.io/2026/09/15/%E5%AE%87%E6%A0%91%E6%9C%BA%E5%99%A8%E7%8B%97/"},"publisher":{"@type":"Organization","name":"SO","sameAs":[],"image":"https://MetalSO.github.io/images/avatar.png","logo":{"@type":"ImageObject","url":"https://MetalSO.github.io/images/avatar.png"}},"url":"https://metalso.github.io/2026/09/15/%E5%AE%87%E6%A0%91%E6%9C%BA%E5%99%A8%E7%8B%97/","keywords":"ROS","image":[]}</script>
   
 </head>
 <body><div id="l_cover"></div><div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
@@ -81,7 +81,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-09-15T13:12:08.000Z">2026-09-15</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-09-15T13:12:15.189Z">2026-09-15</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-09-15T13:12:08.000Z">2026-09-15</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-09-15T13:51:53.154Z">2026-09-15</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -93,8 +93,10 @@
     
   </div>
   </div><article class="md-text content"><h2 id="机械臂链路启动"><a href="#机械臂链路启动" class="headerlink" title="机械臂链路启动"></a>机械臂链路启动</h2><ol>
-<li>机械臂使能<br>打开一个终端 输入：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /home/unitree/ARX_X5/00-sh/ROS2</span><br></pre></td></tr></table></figure></li>
+<li>机械臂使能</li>
 </ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /home/unitree/ARX_X5/00-sh/ROS2</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash 04single_arm.sh</span><br></pre></td></tr></table></figure>
 <p>   输入密码（<strong>123</strong>）<br>   <strong>观察机械臂是否还有红灯且能否晃动，使能成功全是绿灯且不能晃动,失败就 ctrl c 停掉,再输入bash 04single_arm.sh,输入密码（123）,再跑一遍,一般启动两遍即可</strong><br>2. 机械臂一键启动脚本</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash start_arx.sh</span><br></pre></td></tr></table></figure>
@@ -102,15 +104,10 @@
 <li>机械臂一键停止脚本<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash stop_arx.sh</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h2 id="导航链路启动"><a href="#导航链路启动" class="headerlink" title="导航链路启动"></a>导航链路启动</h2><ol>
-<li><p>导航一键启动脚本</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash start_nav.sh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>rviz2显示</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rviz2</span><br></pre></td></tr></table></figure></li>
-<li><p>nav2导航功能包启动</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ros2 launch go2_nav nav2.launch.py</span><br></pre></td></tr></table></figure></li>
-<li><p>导航一键终止脚本</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash stop_nav.sh</span><br></pre></td></tr></table></figure></li>
+<li>导航一键启动脚本<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash start_nav.sh</span><br></pre></td></tr></table></figure></li>
+<li>rviz2显示<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rviz2</span><br></pre></td></tr></table></figure></li>
+<li>nav2导航功能包启动<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ros2 launch go2_nav nav2.launch.py</span><br></pre></td></tr></table></figure></li>
+<li>导航一键终止脚本<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash stop_nav.sh</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h2 id="服务器通信"><a href="#服务器通信" class="headerlink" title="服务器通信"></a>服务器通信</h2><ol start="5">
 <li>打开一个终端 输入：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /home/unitree/ARX_X5/ROS2/X5_ws </span><br></pre></td></tr></table></figure>
