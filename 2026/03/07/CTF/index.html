@@ -2,7 +2,7 @@
   
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/2.0.0-rc.6" theme-name="Stellar" theme-version="2.0.0-rc.6">
-  <link rel="canonical" href="https://metalso.github.io/2026/03/07/CTF/sql注入/" data-stellar-page-meta="">
+  <link rel="canonical" href="https://metalso.github.io/2026/03/07/CTF/" data-stellar-page-meta="">
   
   <meta name="generator" content="Hexo 8.1.1">
   <meta http-equiv="x-dns-prefetch-control" content="on">
@@ -15,7 +15,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
-  <title data-stellar-page-meta="">sql注入 - SO的博客</title>
+  <title data-stellar-page-meta="">ctf比赛及备赛思路 - SO的博客</title>
   <script data-stellar-script="core">
     (function () {
       var key = 'stellar:v2:leftbar-state';
@@ -29,21 +29,21 @@
     })();
   </script>
 
-  <meta name="description" content="本文介绍网络安全中的sql注入问题。" data-stellar-page-meta="">
+  <meta name="description" content="快速入门CTF" data-stellar-page-meta="">
 <meta property="og:type" content="article" data-stellar-page-meta="">
-<meta property="og:title" content="sql注入" data-stellar-page-meta="">
-<meta property="og:url" content="https://metalso.github.io/2026/03/07/CTF/sql%E6%B3%A8%E5%85%A5/" data-stellar-page-meta="">
+<meta property="og:title" content="ctf比赛及备赛思路" data-stellar-page-meta="">
+<meta property="og:url" content="https://metalso.github.io/2026/03/07/CTF/" data-stellar-page-meta="">
 <meta property="og:site_name" content="SO的博客" data-stellar-page-meta="">
-<meta property="og:description" content="本文介绍网络安全中的sql注入问题。" data-stellar-page-meta="">
+<meta property="og:description" content="快速入门CTF" data-stellar-page-meta="">
 <meta property="og:locale" content="zh_CN" data-stellar-page-meta="">
 <meta property="og:image" content="https://metalso.github.io/images/avatar.png" data-stellar-page-meta="">
 <meta property="article:author" content="SO" data-stellar-page-meta="">
 <meta property="article:published_time" content="2026-03-06T16:00:00.000Z" data-stellar-page-meta="">
-<meta property="article:modified_time" content="2026-07-24T06:53:52.000Z" data-stellar-page-meta="">
+<meta property="article:modified_time" content="2026-09-22T10:18:15.000Z" data-stellar-page-meta="">
 <meta property="article:tag" content="ctf" data-stellar-page-meta="">
 <meta property="article:tag" content="网安" data-stellar-page-meta="">
 <meta name="twitter:card" content="summary" data-stellar-page-meta="">
-<meta name="twitter:image" content="https://metalso.github.io/images/avatar.png" data-stellar-page-meta=""><meta name="twitter:title" content="sql注入" data-stellar-page-meta="">
+<meta name="twitter:image" content="https://metalso.github.io/images/avatar.png" data-stellar-page-meta=""><meta name="twitter:title" content="ctf比赛及备赛思路" data-stellar-page-meta="">
   
   
   <meta name="keywords" content="ctf,网安" data-stellar-page-meta="">
@@ -62,7 +62,7 @@
 
   
 
-  <script type="application/ld+json" data-stellar-page-meta="">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"SO","sameAs":[],"image":"https://MetalSO.github.io/images/avatar.png"},"dateCreated":"2026-03-07T00:00:00+08:00","dateModified":"2026-07-24T14:53:52+08:00","datePublished":"2026-03-07T00:00:00+08:00","description":"本文介绍网络安全中的sql注入问题。","headline":"sql注入","mainEntityOfPage":{"@type":"WebPage","@id":"https://metalso.github.io/2026/03/07/CTF/sql%E6%B3%A8%E5%85%A5/"},"publisher":{"@type":"Organization","name":"SO","sameAs":[],"image":"https://MetalSO.github.io/images/avatar.png","logo":{"@type":"ImageObject","url":"https://MetalSO.github.io/images/avatar.png"}},"url":"https://metalso.github.io/2026/03/07/CTF/sql%E6%B3%A8%E5%85%A5/","image":["https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg"],"keywords":"ctf, 网安","thumbnailUrl":"https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg"}</script>
+  <script type="application/ld+json" data-stellar-page-meta="">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"SO","sameAs":[],"image":"https://MetalSO.github.io/images/avatar.png"},"dateCreated":"2026-03-07T00:00:00+08:00","dateModified":"2026-09-22T18:18:15+08:00","datePublished":"2026-03-07T00:00:00+08:00","description":"快速入门CTF","headline":"ctf比赛及备赛思路","mainEntityOfPage":{"@type":"WebPage","@id":"https://metalso.github.io/2026/03/07/CTF/"},"publisher":{"@type":"Organization","name":"SO","sameAs":[],"image":"https://MetalSO.github.io/images/avatar.png","logo":{"@type":"ImageObject","url":"https://MetalSO.github.io/images/avatar.png"}},"url":"https://metalso.github.io/2026/03/07/CTF/","image":["https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg"],"keywords":"ctf, 网安","thumbnailUrl":"https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg"}</script>
   
 
   <link rel="stylesheet" href="/css/stellar-icons.css?v=7c185ad1a9a79674">
@@ -216,6 +216,42 @@
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
   
     
+<a class="ui-collection__item ui-interactive card-hover card-hover--spotlight" href="/2026/09/21/Obsidian-Markdown%E6%93%8D%E4%BD%9C%E9%80%9F%E6%9F%A5/" title="Obsidian-Markdown操作速查" data-stellar-navigation="">
+  
+  
+  <span class="ui-collection__initial" aria-hidden="true">O</span>
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">Obsidian-Markdown操作速查</span>
+      
+      
+    </span>
+  
+  
+  
+</a>
+
+  
+    
+<a class="ui-collection__item ui-interactive card-hover card-hover--spotlight" href="/2026/03/07/CTF/" title="ctf比赛及备赛思路" data-stellar-navigation="">
+  
+  
+  <span class="ui-collection__initial" aria-hidden="true">C</span>
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">ctf比赛及备赛思路</span>
+      
+      
+    </span>
+  
+  
+  
+</a>
+
+  
+    
 <a class="ui-collection__item ui-interactive card-hover card-hover--spotlight" href="/2026/07/15/ROS2/" title="ROS2" data-stellar-navigation="">
   
   
@@ -278,24 +314,6 @@
     <span class="ui-collection__content">
       
       <span class="ui-collection__title">计算机网络笔记</span>
-      
-      
-    </span>
-  
-  
-  
-</a>
-
-  
-    
-<a class="ui-collection__item ui-interactive card-hover card-hover--spotlight" href="/2026/09/21/Obsidian-Markdown%E6%93%8D%E4%BD%9C%E9%80%9F%E6%9F%A5/" title="Obsidian-Markdown操作速查" data-stellar-navigation="">
-  
-  
-  <span class="ui-collection__initial" aria-hidden="true">O</span>
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">Obsidian-Markdown操作速查</span>
       
       
     </span>
@@ -377,24 +395,6 @@
 </a>
 
   
-    
-<a class="ui-collection__item ui-interactive card-hover card-hover--spotlight" href="/2026/09/15/%E5%AE%87%E6%A0%91%E6%9C%BA%E5%99%A8%E7%8B%97/" title="宇树机器狗" data-stellar-navigation="">
-  
-  
-  <span class="ui-collection__initial" aria-hidden="true">宇</span>
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">宇树机器狗</span>
-      
-      
-    </span>
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -423,24 +423,126 @@
   <div class="content">
     
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
-<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/">个人观点</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/%E6%8A%80%E6%9C%AF/">技术</a>
 </div></div><div class="meta-row">
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-03-06T16:00:00.000Z">2026-03-07</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-07-24T06:53:52.000Z">2026-07-24</time></span></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2026-03-06T16:00:00.000Z">2026-03-07</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-09-22T10:18:15.000Z">2026-09-22</time></span></div>
 </div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>sql注入</span></h1>
+        <h1 class="text title"><span>ctf比赛及备赛思路</span></h1>
         
       </div>
     </div>
     
   </div>
   </div></div>
-<article class="md-text content slide-up"><h2 id="SQL基础语句"><a href="#SQL基础语句" class="headerlink" title="SQL基础语句" data-stellar-navigation=""></a>SQL基础语句</h2><h4 id="一、带有条件的查询-where"><a href="#一、带有条件的查询-where" class="headerlink" title="一、带有条件的查询 where" data-stellar-navigation=""></a>一、<strong>带有条件的查询 where</strong></h4><p>语法 : select 列名称 from 表名称 where 列 运算符 值</p>
+<article class="md-text content slide-up"><h1 id="什么是CTF"><a href="#什么是CTF" class="headerlink" title="什么是CTF" data-stellar-navigation=""></a>什么是CTF</h1><h4 id="ctf比赛"><a href="#ctf比赛" class="headerlink" title="ctf比赛" data-stellar-navigation=""></a>ctf比赛</h4><p>ctf比赛分为多种竞赛模式，目前主流为类似算法竞赛的解题模式，主要是找漏洞，逆向分析原理，破解算法，获取flag。</p>
+<h4 id="备战思路"><a href="#备战思路" class="headerlink" title="备战思路" data-stellar-navigation=""></a>备战思路</h4><blockquote>
+<p>基础知识：<strong>linux基础（基本的命令） 网络协议分析</strong>  操作系统原理 （不必精通，但要了解）<strong>python</strong>需要良好的基础</p>
+</blockquote>
+<ul>
+<li>网络技术：HCNA CCNA</li>
+<li>数据库的增删查改：数据库的基本操作 SQL语句</li>
+<li>计算机基础-&gt;Web应用-&gt;数据库-&gt;刷题</li>
+</ul>
+<h1 id="CTF的相关题型"><a href="#CTF的相关题型" class="headerlink" title="CTF的相关题型" data-stellar-navigation=""></a>CTF的相关题型</h1><h2 id="WEB"><a href="#WEB" class="headerlink" title="WEB" data-stellar-navigation=""></a>WEB</h2><p><code>btoa()</code> 对原始密码进行 <strong>Base64 编码</strong></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">encoded = btoa(encoded + 'xH7jK').slice(3);</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>在上一步结果后拼接字符串 <code>'xH7jK'</code>，</li>
+<li>再次 Base64 编码，</li>
+<li>然后取从第 3 个字符开始的子串（去掉前3个字符）。</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">encoded = btoa(encoded.split('').reverse().join(''));</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>将当前字符串<strong>反转</strong>（例如 <code>"abc"</code> → <code>"cba"</code>），</li>
+<li>再次 Base64 编码</li>
+</ul>
+<p>注意：Base64 字符串长度必须是 4 的倍数。</p>
+<h3 id="爆破"><a href="#爆破" class="headerlink" title="爆破" data-stellar-navigation=""></a>爆破</h3><p>Authorization请求头用于验证是否有从服务器访问所需数据的权限。</p>
+<p>有些问题不知到用户名，只能先假设用户名为admin</p>
+<p><strong>多多看其他师傅的博客</strong></p>
+<p>打完ctf比赛的你肯定是想看writeup（答案）的，一般来说赛后过几天就会有很多师傅发出他的writeup，从比赛群、百度等途径都可以找到。多多看看其他师傅的解题思路，关注几个大牛，看看他们发的技术文章，都是很好的学习方法。</p>
+<h3 id="信息泄露"><a href="#信息泄露" class="headerlink" title="信息泄露" data-stellar-navigation=""></a>信息泄露</h3><h4 id="log"><a href="#log" class="headerlink" title="log" data-stellar-navigation=""></a>log</h4><ul>
+<li>git 泄露</li>
+<li>查看历史记录</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>切换版本</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>对比两次提交</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>1. 勘察战场：查看提交历史与分支</strong></p>
+<ul>
+<li><code>git log --oneline --all --graph</code><ul>
+<li><strong>作用</strong>：以简洁的方式查看<strong>所有分支</strong>的提交历史图谱。</li>
+<li><strong>CTF用途</strong>：快速发现出题人留下的“作案痕迹”，例如测试性提交、临时回滚、在<code>dev</code>或<code>flag</code>等非主流分支上的可疑提交。</li>
+</ul>
+</li>
+<li><code>git branch -a</code><ul>
+<li><strong>作用</strong>：列出所有（包括远程）分支。</li>
+<li><strong>CTF用途</strong>：直接找到隐藏的分支名称。Flag有时就在<code>flag</code>、<code>secret</code>这类分支上。</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. 深入分析：查看提交详情与差异</strong></p>
+<p>git reset切换版本</p>
+<ul>
+<li><code>git show &lt;commit_id&gt;</code><ul>
+<li><strong>作用</strong>：显示某次提交的详细信息，包括修改的文件和具体的代码差异（diff）。</li>
+<li><strong>CTF用途</strong>：仔细查看某次可疑提交究竟改了什么东西。Flag可能以注释、调试信息、硬编码密码的形式在修改中被添加或<strong>删除</strong>。</li>
+</ul>
+</li>
+<li><code>git diff &lt;commit_id_A&gt; &lt;commit_id_B&gt;</code><ul>
+<li><strong>作用</strong>：直接比较两次提交之间的差异。</li>
+<li><strong>CTF用途</strong>：专注于出题人可能刻意隐藏的变化，比如比较最初提交和最新提交，看看哪些“提示”被删除了。</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. 挖掘宝藏：找回丢失的文件与对象</strong><br>这是CTF中<strong>极为常见</strong>和<strong>重要</strong>的一步。</p>
+<ul>
+<li><code>git fsck --lost-found</code><ul>
+<li><strong>作用</strong>：检查仓库的完整性，并列出所有“悬空对象”（即不在任何提交历史中的对象，如被删除分支上的提交、被<code>git rm</code>删除后又<code>commit</code>的文件内容）。</li>
+<li><strong>CTF用例</strong>：执行此命令后，如果输出<code>dangling blob &lt;object_id&gt;</code>，那么恭喜，很可能找到了被删除的flag文件。</li>
+</ul>
+</li>
+<li><code>git show &lt;dangling_blob_object_id&gt;</code><ul>
+<li><strong>作用</strong>：直接查看这个悬空对象的内容。</li>
+<li><strong>CTF用例</strong>：查看被删除flag文件的内容。有时需要尝试多个<code>object_id</code>。</li>
+</ul>
+</li>
+</ul>
+<p><strong>4. 检查特殊状态与配置文件</strong></p>
+<ul>
+<li>检查是否处于“分离头指针”状态：<code>git status</code><ul>
+<li>有时出题人可能会让仓库处于一个特殊的临时状态，这里可能有线索。</li>
+</ul>
+</li>
+<li>检查<code>.git</code>目录本身：<code>cat .git/config</code> 或 <code>find .git -type f</code><ul>
+<li><code>.git/config</code> 文件中有时会包含敏感路径或服务器信息。</li>
+<li><code>.git</code>目录下有时会藏有额外的笔记或flag文件。</li>
+</ul>
+</li>
+</ul>
+<p>💎 高效技巧总结</p>
+<ul>
+<li><strong>组合拳</strong>：不要只运行一个命令。<code>git log</code> -&gt; <code>git show</code> -&gt; <code>git diff</code> -&gt; <code>git fsck</code> 是一个完整的侦查链条。</li>
+<li><strong>关键字搜索</strong>：在所有检出文件和历史记录中搜索<code>flag</code>、<code>key</code>、<code>pass</code>、<code>secret</code>等关键字：<code>grep -r "flag{" . 2&gt;/dev/null</code>。</li>
+<li><strong>理解出题意图</strong>：<code>.git</code>泄露题目的核心是考察“信息残留在版本控制中”。思考出题人可能在哪里“不小心”留下了flag。</li>
+</ul>
+<h3 id="SQL基础语句"><a href="#SQL基础语句" class="headerlink" title="SQL基础语句" data-stellar-navigation=""></a>SQL基础语句</h3><h4 id="一、带有条件的查询-where"><a href="#一、带有条件的查询-where" class="headerlink" title="一、带有条件的查询 where" data-stellar-navigation=""></a>一、<strong>带有条件的查询 where</strong></h4><p>语法 : select 列名称 from 表名称 where 列 运算符 值</p>
 <h4 id="二、INSERT-插入数据"><a href="#二、INSERT-插入数据" class="headerlink" title="二、INSERT 插入数据" data-stellar-navigation=""></a>二、INSERT 插入数据</h4><p>语法:   INSERT INTO 表的名称 values(值1，值2，值3…)<br>或者可以指定特定的列来进行插入数据操作<br>         INSERT INTO table_name (列1，列2，……) VALUES （值1，值2，…..）<br>        INSERT INTO table_name (列1，列2，……) VALUES （值1，值2，…..）,(值3，值4)，(值5，值6)</p>
-<h3 id="两种注释"><a href="#两种注释" class="headerlink" title="两种注释" data-stellar-navigation=""></a>两种注释</h3><ol>
+<h4 id="两种注释"><a href="#两种注释" class="headerlink" title="两种注释" data-stellar-navigation=""></a>两种注释</h4><ol>
 <li><p>– 注意要加空格在末尾</p>
 </li>
 <li><h1 id="直接注释"><a href="#直接注释" class="headerlink" title="直接注释" data-stellar-navigation=""></a>直接注释</h1></li>
@@ -451,14 +553,15 @@
 <figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> products;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>通过请求url分析服务端的SQL语句</p>
+<h2 id="MISC"><a href="#MISC" class="headerlink" title="MISC" data-stellar-navigation=""></a>MISC</h2><h3 id="文件隐写"><a href="#文件隐写" class="headerlink" title="文件隐写" data-stellar-navigation=""></a>文件隐写</h3><p>Word文件（特别是.docx格式）本质上是一个ZIP压缩包，内部采用XML结构组织文字、图片、附件等资源。在CTF题目中，可以尝试将文件后缀改为.zip后解压，检查其中的XML文件、媒体资源或隐藏数据来寻找flag。</p>
 </article>
 <div class="article-tags slide-up"><a class="tag" href="/tags/ctf/"><svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>ctf</a><a class="tag" href="/tags/%E7%BD%91%E5%AE%89/"><svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>网安</a></div>
 
 
   <div class="article-share slide-up" id="share">
     <div class="body">
-      <div class="social-wrap dis-select"><a class="social share-item qrcode ui-interactive is-icon-only" onclick="util.toggle(&quot;share-qrcode&quot;)" aria-label="分享文章: QR Code" title="分享文章: QR Code"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><path fill="currentColor" d="M10.553 13.447c-.424-.424-.95-.596-1.535-.675c-.553-.074-1.25-.074-2.086-.074H5.827c-.58 0-1.065 0-1.459.037c-.411.04-.795.124-1.146.34c-.345.21-.634.5-.845.844c-.216.352-.3.735-.34 1.147C2 15.459 2 15.944 2 16.525v.068c0 .884 0 1.597.055 2.17c.056.592.175 1.108.459 1.571c.288.47.682.864 1.152 1.152c.463.284.979.403 1.57.46C5.81 22 6.524 22 7.407 22h.07c.58 0 1.064 0 1.458-.037c.412-.04.795-.124 1.147-.34c.344-.21.633-.5.844-.844c.216-.352.3-.736.34-1.147c.037-.394.037-.879.037-1.46v-1.104c0-.836 0-1.533-.074-2.086c-.079-.584-.251-1.111-.675-1.535m-1.62-11.41c.412.04.795.124 1.147.34c.344.21.633.5.844.845c.216.351.3.735.34 1.146c.037.394.037.879.037 1.46v1.104c0 .836 0 1.533-.074 2.086c-.079.584-.251 1.111-.675 1.535s-.95.596-1.535.675c-.553.074-1.25.074-2.086.074H5.827c-.58 0-1.065 0-1.459-.037c-.411-.04-.795-.124-1.146-.34a2.56 2.56 0 0 1-.845-.844c-.216-.352-.3-.735-.34-1.147C2 8.54 2 8.056 2 7.475v-.068c0-.884 0-1.597.055-2.17c.056-.592.175-1.108.459-1.571c.288-.47.682-.864 1.152-1.152c.463-.284.979-.403 1.57-.46C5.81 2 6.524 2 7.407 2h.07c.58 0 1.064 0 1.458.037M16.593 2h-.068c-.58 0-1.065 0-1.46.037c-.41.04-.794.124-1.146.34c-.344.21-.633.5-.844.845c-.216.351-.3.735-.34 1.146c-.037.394-.037.879-.037 1.46v1.104c0 .836 0 1.533.074 2.086c.079.584.251 1.111.675 1.535s.95.596 1.535.675c.553.074 1.25.074 2.086.074h1.105c.58 0 1.065 0 1.459-.037c.411-.04.795-.124 1.146-.34c.345-.21.634-.5.845-.844c.216-.352.3-.735.34-1.147C22 8.54 22 8.056 22 7.475v-.068c0-.884 0-1.597-.055-2.17c-.056-.592-.175-1.108-.459-1.571a3.5 3.5 0 0 0-1.152-1.152c-.463-.284-.979-.403-1.57-.46C18.19 2 17.477 2 16.594 2" opacity=".5"></path><path fill="currentColor" d="M14.093 21.302a.698.698 0 1 1-1.396 0v-2.79h1.396z" opacity=".4"></path><path fill="currentColor" d="M21.302 12.698a.7.7 0 0 0-.697.697v3.256H22v-3.256a.7.7 0 0 0-.698-.697" opacity=".5"></path><path fill="currentColor" d="M16.076 16.617c-.076.184-.076.417-.076.883s0 .699.076.883a1 1 0 0 0 .541.54c.184.077.417.077.883.077s.699 0 .883-.076a1 1 0 0 0 .54-.541c.077-.184.077-.417.077-.883s0-.699-.076-.883a1 1 0 0 0-.541-.54C18.199 16 17.966 16 17.5 16s-.699 0-.883.076a1 1 0 0 0-.54.541"></path><path fill="currentColor" d="M22 18.535v-.023h-1.396c0 .443 0 .74-.016.97c-.015.224-.043.333-.073.405a1.16 1.16 0 0 1-.629.63c-.072.029-.18.056-.405.072c-.23.015-.527.016-.97.016h-1.86V22h1.883c.414 0 .759 0 1.042-.02a2.6 2.6 0 0 0 .844-.175a2.56 2.56 0 0 0 1.384-1.384c.112-.27.156-.549.176-.844c.02-.283.02-.628.02-1.042" opacity=".7"></path><path fill="currentColor" d="M12.697 16.616v.035h1.396c0-.668 0-1.116.035-1.458c.034-.33.093-.482.16-.583a1.2 1.2 0 0 1 .321-.32c.101-.068.254-.128.584-.161c.342-.035.79-.036 1.458-.036h1.86v-1.395h-1.896c-.623 0-1.142 0-1.563.043c-.44.044-.85.142-1.218.388c-.28.187-.519.426-.706.706c-.246.368-.343.777-.388 1.217c-.043.421-.043.94-.043 1.564" opacity=".6"></path><path fill="currentColor" d="M5.508 18.69c.219.155.528.155 1.146.155c.619 0 .928 0 1.146-.155a.8.8 0 0 0 .2-.199c.154-.218.154-.527.154-1.146s0-.927-.155-1.146A.8.8 0 0 0 7.8 16c-.218-.155-.527-.155-1.146-.155s-.927 0-1.146.155a.8.8 0 0 0-.199.2c-.155.218-.155.527-.155 1.145c0 .619 0 .928.155 1.146a.8.8 0 0 0 .2.2M6.654 8.155c-.618 0-.927 0-1.146-.155a.8.8 0 0 1-.199-.2c-.155-.217-.155-.527-.155-1.145c0-.619 0-.928.155-1.146a.8.8 0 0 1 .2-.2c.218-.154.527-.154 1.145-.154c.619 0 .928 0 1.146.155a.8.8 0 0 1 .2.199c.154.218.154.527.154 1.146s0 .928-.155 1.146A.8.8 0 0 1 7.8 8c-.218.155-.527.155-1.146.155M16.2 8c.218.155.527.155 1.146.155s.927 0 1.146-.155a.8.8 0 0 0 .199-.199c.155-.218.155-.528.155-1.146c0-.619 0-.928-.155-1.146a.8.8 0 0 0-.2-.2c-.218-.154-.527-.154-1.145-.154c-.619 0-.928 0-1.146.155a.8.8 0 0 0-.2.199c-.154.218-.154.527-.154 1.146s0 .928.155 1.146A.8.8 0 0 0 16.2 8"></path></svg></span></a><a class="social share-item weibo ui-interactive is-icon-only" href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fmetalso.github.io%2F2026%2F03%2F07%2FCTF%2Fsql%25E6%25B3%25A8%25E5%2585%25A5%2F&amp;title=sql%E6%B3%A8%E5%85%A5%20-%20SO%E7%9A%84%E5%8D%9A%E5%AE%A2&amp;summary=%E6%9C%AC%E6%96%87%E4%BB%8B%E7%BB%8D%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%AD%E7%9A%84sql%E6%B3%A8%E5%85%A5%E9%97%AE%E9%A2%98%E3%80%82" target="_blank" rel="external nofollow noopener noreferrer" aria-label="分享文章: Weibo" title="分享文章: Weibo"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Simple Icons - https://creativecommons.org/publicdomain/zero/1.0/ --><path fill="currentColor" d="M10.098 20.323c-3.977.391-7.414-1.406-7.672-4.02-.259-2.609 2.759-5.047 6.74-5.441 3.979-.394 7.413 1.404 7.671 4.018.259 2.6-2.759 5.049-6.737 5.439l-.002.004zM9.05 17.219c-.384.616-1.208.884-1.829.602-.612-.279-.793-.991-.406-1.593.379-.595 1.176-.861 1.793-.601.622.263.82.972.442 1.592zm1.27-1.627c-.141.237-.449.353-.689.253-.236-.09-.313-.361-.177-.586.138-.227.436-.346.672-.24.239.09.315.36.18.601l.014-.028zm.176-2.719c-1.893-.493-4.033.45-4.857 2.118-.836 1.704-.026 3.591 1.886 4.21 1.983.64 4.318-.341 5.132-2.179.8-1.793-.201-3.642-2.161-4.149zm7.563-1.224c-.346-.105-.57-.18-.405-.615.375-.977.42-1.804 0-2.404-.781-1.112-2.915-1.053-5.364-.03 0 0-.766.331-.571-.271.376-1.217.315-2.224-.27-2.809-1.338-1.337-4.869.045-7.888 3.08C1.309 10.87 0 13.273 0 15.348c0 3.981 5.099 6.395 10.086 6.395 6.536 0 10.888-3.801 10.888-6.82 0-1.822-1.547-2.854-2.915-3.284v.01zm1.908-5.092c-.766-.856-1.908-1.187-2.96-.962-.436.09-.706.511-.616.932.09.42.511.691.932.602.511-.105 1.067.044 1.442.465.376.421.466.977.316 1.473-.136.406.089.856.51.992.405.119.857-.105.992-.512.33-1.021.12-2.178-.646-3.035l.03.045zm2.418-2.195c-1.576-1.757-3.905-2.419-6.054-1.968-.496.104-.812.587-.706 1.081.104.496.586.813 1.082.707 1.532-.331 3.185.15 4.296 1.383 1.112 1.246 1.429 2.943.947 4.416-.165.48.106 1.007.586 1.157.479.165.991-.104 1.157-.586.675-2.088.241-4.478-1.338-6.235l.03.045z"></path></svg></span></a><a class="social share-item x ui-interactive is-icon-only" href="https://x.com/intent/tweet?text=sql%E6%B3%A8%E5%85%A5%20-%20SO%E7%9A%84%E5%8D%9A%E5%AE%A2&amp;url=https%3A%2F%2Fmetalso.github.io%2F2026%2F03%2F07%2FCTF%2Fsql%25E6%25B3%25A8%25E5%2585%25A5%2F" target="_blank" rel="external nofollow noopener noreferrer" aria-label="分享文章: X" title="分享文章: X"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Simple Icons - https://creativecommons.org/publicdomain/zero/1.0/ --><path fill="currentColor" d="M14.234 10.162L22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299l-.929-1.329L3.076 1.56h3.182l5.965 8.532l.929 1.329l7.754 11.09h-3.182z"></path></svg></span></a><a class="social share-item telegram ui-interactive is-icon-only" href="https://t.me/share/url?url=https%3A%2F%2Fmetalso.github.io%2F2026%2F03%2F07%2FCTF%2Fsql%25E6%25B3%25A8%25E5%2585%25A5%2F&amp;text=sql%E6%B3%A8%E5%85%A5%20-%20SO%E7%9A%84%E5%8D%9A%E5%AE%A2" target="_blank" rel="external nofollow noopener noreferrer" aria-label="分享文章: Telegram" title="分享文章: Telegram"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Simple Icons - https://creativecommons.org/publicdomain/zero/1.0/ --><path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12a12 12 0 0 0 12-12A12 12 0 0 0 12 0zm4.962 7.224c.1-.002.321.023.465.14a.5.5 0 0 1 .171.325c.016.093.036.306.02.472c-.18 1.898-.962 6.502-1.36 8.627c-.168.9-.499 1.201-.82 1.23c-.696.065-1.225-.46-1.9-.902c-1.056-.693-1.653-1.124-2.678-1.8c-1.185-.78-.417-1.21.258-1.91c.177-.184 3.247-2.977 3.307-3.23c.007-.032.014-.15-.056-.212s-.174-.041-.249-.024q-.159.037-5.061 3.345q-.72.495-1.302.48c-.428-.008-1.252-.241-1.865-.44c-.752-.245-1.349-.374-1.297-.789q.04-.324.893-.663q5.247-2.286 6.998-3.014c3.332-1.386 4.025-1.627 4.476-1.635"></path></svg></span></a><a class="social share-item whatsapp ui-interactive is-icon-only" href="https://wa.me/?text=sql%E6%B3%A8%E5%85%A5%20-%20SO%E7%9A%84%E5%8D%9A%E5%AE%A2%0Ahttps%3A%2F%2Fmetalso.github.io%2F2026%2F03%2F07%2FCTF%2Fsql%25E6%25B3%25A8%25E5%2585%25A5%2F" target="_blank" rel="external nofollow noopener noreferrer" aria-label="分享文章: WhatsApp" title="分享文章: WhatsApp"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Simple Icons - https://creativecommons.org/publicdomain/zero/1.0/ --><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967c-.273-.099-.471-.148-.67.15c-.197.297-.767.966-.94 1.164c-.173.199-.347.223-.644.075c-.297-.15-1.255-.463-2.39-1.475c-.883-.788-1.48-1.761-1.653-2.059c-.173-.297-.018-.458.13-.606c.134-.133.298-.347.446-.52s.198-.298.298-.497c.099-.198.05-.371-.025-.52s-.669-1.612-.916-2.207c-.242-.579-.487-.5-.669-.51a13 13 0 0 0-.57-.01c-.198 0-.52.074-.792.372c-.272.297-1.04 1.016-1.04 2.479c0 1.462 1.065 2.875 1.213 3.074s2.096 3.2 5.077 4.487c.709.306 1.262.489 1.694.625c.712.227 1.36.195 1.871.118c.571-.085 1.758-.719 2.006-1.413s.248-1.289.173-1.413c-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214l-3.741.982l.998-3.648l-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884c2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.82 11.82 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.9 11.9 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.48-8.413"></path></svg></span></a><a class="social share-item email ui-interactive is-icon-only" href="mailto:?subject=sql%E6%B3%A8%E5%85%A5%20-%20SO%E7%9A%84%E5%8D%9A%E5%AE%A2&amp;body=https%3A%2F%2Fmetalso.github.io%2F2026%2F03%2F07%2FCTF%2Fsql%25E6%25B3%25A8%25E5%2585%25A5%2F" aria-label="分享文章: Email" title="分享文章: Email"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><path fill="currentColor" fill-rule="evenodd" d="M3.172 5.172C2 6.343 2 8.229 2 12s0 5.657 1.172 6.828C4.343 20 6.229 20 10 20h4c3.771 0 5.657 0 6.828-1.172C22 17.657 22 15.771 22 12s0-5.657-1.172-6.828C19.657 4 17.771 4 14 4h-4C6.229 4 4.343 4 3.172 5.172m15.404 2.348a.75.75 0 0 1-.096 1.056l-2.196 1.83c-.887.739-1.605 1.338-2.24 1.746-.66.424-1.303.693-2.044.693s-1.384-.269-2.045-.693c-.634-.408-1.352-1.007-2.239-1.745L5.52 8.576a.75.75 0 1 1 .96-1.152l2.159 1.799c.933.777 1.58 1.315 2.128 1.667.529.34.888.455 1.233.455s.704-.115 1.233-.455c.547-.352 1.195-.89 2.128-1.667l2.159-1.8a.75.75 0 0 1 1.056.097" clip-rule="evenodd"></path></svg></span></a></div>
-      <div class="share-qrcode" id="share-qrcode" style="opacity:0;height:0"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&amp;data=https%3A%2F%2Fmetalso.github.io%2F2026%2F03%2F07%2FCTF%2Fsql%25E6%25B3%25A8%25E5%2585%25A5%2F" onerror="this.onerror=null;this.src=&quot;/images/stellar-error.491ee870f4940739.svg&quot;" data-stellar-image-color="{&quot;size&quot;:64,&quot;hsla&quot;:[0,0,49.4505,1]}" data-stellar-image-source="https://api.qrserver.com/v1/create-qr-code/?size=256x256&amp;data=https%3A%2F%2Fmetalso.github.io%2F2026%2F03%2F07%2FCTF%2Fsql%25E6%25B3%25A8%25E5%2585%25A5%2F"></div>
+      <div class="social-wrap dis-select"><a class="social share-item qrcode ui-interactive is-icon-only" onclick="util.toggle(&quot;share-qrcode&quot;)" aria-label="分享文章: QR Code" title="分享文章: QR Code"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><path fill="currentColor" d="M10.553 13.447c-.424-.424-.95-.596-1.535-.675c-.553-.074-1.25-.074-2.086-.074H5.827c-.58 0-1.065 0-1.459.037c-.411.04-.795.124-1.146.34c-.345.21-.634.5-.845.844c-.216.352-.3.735-.34 1.147C2 15.459 2 15.944 2 16.525v.068c0 .884 0 1.597.055 2.17c.056.592.175 1.108.459 1.571c.288.47.682.864 1.152 1.152c.463.284.979.403 1.57.46C5.81 22 6.524 22 7.407 22h.07c.58 0 1.064 0 1.458-.037c.412-.04.795-.124 1.147-.34c.344-.21.633-.5.844-.844c.216-.352.3-.736.34-1.147c.037-.394.037-.879.037-1.46v-1.104c0-.836 0-1.533-.074-2.086c-.079-.584-.251-1.111-.675-1.535m-1.62-11.41c.412.04.795.124 1.147.34c.344.21.633.5.844.845c.216.351.3.735.34 1.146c.037.394.037.879.037 1.46v1.104c0 .836 0 1.533-.074 2.086c-.079.584-.251 1.111-.675 1.535s-.95.596-1.535.675c-.553.074-1.25.074-2.086.074H5.827c-.58 0-1.065 0-1.459-.037c-.411-.04-.795-.124-1.146-.34a2.56 2.56 0 0 1-.845-.844c-.216-.352-.3-.735-.34-1.147C2 8.54 2 8.056 2 7.475v-.068c0-.884 0-1.597.055-2.17c.056-.592.175-1.108.459-1.571c.288-.47.682-.864 1.152-1.152c.463-.284.979-.403 1.57-.46C5.81 2 6.524 2 7.407 2h.07c.58 0 1.064 0 1.458.037M16.593 2h-.068c-.58 0-1.065 0-1.46.037c-.41.04-.794.124-1.146.34c-.344.21-.633.5-.844.845c-.216.351-.3.735-.34 1.146c-.037.394-.037.879-.037 1.46v1.104c0 .836 0 1.533.074 2.086c.079.584.251 1.111.675 1.535s.95.596 1.535.675c.553.074 1.25.074 2.086.074h1.105c.58 0 1.065 0 1.459-.037c.411-.04.795-.124 1.146-.34c.345-.21.634-.5.845-.844c.216-.352.3-.735.34-1.147C22 8.54 22 8.056 22 7.475v-.068c0-.884 0-1.597-.055-2.17c-.056-.592-.175-1.108-.459-1.571a3.5 3.5 0 0 0-1.152-1.152c-.463-.284-.979-.403-1.57-.46C18.19 2 17.477 2 16.594 2" opacity=".5"></path><path fill="currentColor" d="M14.093 21.302a.698.698 0 1 1-1.396 0v-2.79h1.396z" opacity=".4"></path><path fill="currentColor" d="M21.302 12.698a.7.7 0 0 0-.697.697v3.256H22v-3.256a.7.7 0 0 0-.698-.697" opacity=".5"></path><path fill="currentColor" d="M16.076 16.617c-.076.184-.076.417-.076.883s0 .699.076.883a1 1 0 0 0 .541.54c.184.077.417.077.883.077s.699 0 .883-.076a1 1 0 0 0 .54-.541c.077-.184.077-.417.077-.883s0-.699-.076-.883a1 1 0 0 0-.541-.54C18.199 16 17.966 16 17.5 16s-.699 0-.883.076a1 1 0 0 0-.54.541"></path><path fill="currentColor" d="M22 18.535v-.023h-1.396c0 .443 0 .74-.016.97c-.015.224-.043.333-.073.405a1.16 1.16 0 0 1-.629.63c-.072.029-.18.056-.405.072c-.23.015-.527.016-.97.016h-1.86V22h1.883c.414 0 .759 0 1.042-.02a2.6 2.6 0 0 0 .844-.175a2.56 2.56 0 0 0 1.384-1.384c.112-.27.156-.549.176-.844c.02-.283.02-.628.02-1.042" opacity=".7"></path><path fill="currentColor" d="M12.697 16.616v.035h1.396c0-.668 0-1.116.035-1.458c.034-.33.093-.482.16-.583a1.2 1.2 0 0 1 .321-.32c.101-.068.254-.128.584-.161c.342-.035.79-.036 1.458-.036h1.86v-1.395h-1.896c-.623 0-1.142 0-1.563.043c-.44.044-.85.142-1.218.388c-.28.187-.519.426-.706.706c-.246.368-.343.777-.388 1.217c-.043.421-.043.94-.043 1.564" opacity=".6"></path><path fill="currentColor" d="M5.508 18.69c.219.155.528.155 1.146.155c.619 0 .928 0 1.146-.155a.8.8 0 0 0 .2-.199c.154-.218.154-.527.154-1.146s0-.927-.155-1.146A.8.8 0 0 0 7.8 16c-.218-.155-.527-.155-1.146-.155s-.927 0-1.146.155a.8.8 0 0 0-.199.2c-.155.218-.155.527-.155 1.145c0 .619 0 .928.155 1.146a.8.8 0 0 0 .2.2M6.654 8.155c-.618 0-.927 0-1.146-.155a.8.8 0 0 1-.199-.2c-.155-.217-.155-.527-.155-1.145c0-.619 0-.928.155-1.146a.8.8 0 0 1 .2-.2c.218-.154.527-.154 1.145-.154c.619 0 .928 0 1.146.155a.8.8 0 0 1 .2.199c.154.218.154.527.154 1.146s0 .928-.155 1.146A.8.8 0 0 1 7.8 8c-.218.155-.527.155-1.146.155M16.2 8c.218.155.527.155 1.146.155s.927 0 1.146-.155a.8.8 0 0 0 .199-.199c.155-.218.155-.528.155-1.146c0-.619 0-.928-.155-1.146a.8.8 0 0 0-.2-.2c-.218-.154-.527-.154-1.145-.154c-.619 0-.928 0-1.146.155a.8.8 0 0 0-.2.199c-.154.218-.154.527-.154 1.146s0 .928.155 1.146A.8.8 0 0 0 16.2 8"></path></svg></span></a><a class="social share-item weibo ui-interactive is-icon-only" href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fmetalso.github.io%2F2026%2F03%2F07%2FCTF%2F&amp;title=ctf%E6%AF%94%E8%B5%9B%E5%8F%8A%E5%A4%87%E8%B5%9B%E6%80%9D%E8%B7%AF%20-%20SO%E7%9A%84%E5%8D%9A%E5%AE%A2&amp;summary=%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8CTF" target="_blank" rel="external nofollow noopener noreferrer" aria-label="分享文章: Weibo" title="分享文章: Weibo"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Simple Icons - https://creativecommons.org/publicdomain/zero/1.0/ --><path fill="currentColor" d="M10.098 20.323c-3.977.391-7.414-1.406-7.672-4.02-.259-2.609 2.759-5.047 6.74-5.441 3.979-.394 7.413 1.404 7.671 4.018.259 2.6-2.759 5.049-6.737 5.439l-.002.004zM9.05 17.219c-.384.616-1.208.884-1.829.602-.612-.279-.793-.991-.406-1.593.379-.595 1.176-.861 1.793-.601.622.263.82.972.442 1.592zm1.27-1.627c-.141.237-.449.353-.689.253-.236-.09-.313-.361-.177-.586.138-.227.436-.346.672-.24.239.09.315.36.18.601l.014-.028zm.176-2.719c-1.893-.493-4.033.45-4.857 2.118-.836 1.704-.026 3.591 1.886 4.21 1.983.64 4.318-.341 5.132-2.179.8-1.793-.201-3.642-2.161-4.149zm7.563-1.224c-.346-.105-.57-.18-.405-.615.375-.977.42-1.804 0-2.404-.781-1.112-2.915-1.053-5.364-.03 0 0-.766.331-.571-.271.376-1.217.315-2.224-.27-2.809-1.338-1.337-4.869.045-7.888 3.08C1.309 10.87 0 13.273 0 15.348c0 3.981 5.099 6.395 10.086 6.395 6.536 0 10.888-3.801 10.888-6.82 0-1.822-1.547-2.854-2.915-3.284v.01zm1.908-5.092c-.766-.856-1.908-1.187-2.96-.962-.436.09-.706.511-.616.932.09.42.511.691.932.602.511-.105 1.067.044 1.442.465.376.421.466.977.316 1.473-.136.406.089.856.51.992.405.119.857-.105.992-.512.33-1.021.12-2.178-.646-3.035l.03.045zm2.418-2.195c-1.576-1.757-3.905-2.419-6.054-1.968-.496.104-.812.587-.706 1.081.104.496.586.813 1.082.707 1.532-.331 3.185.15 4.296 1.383 1.112 1.246 1.429 2.943.947 4.416-.165.48.106 1.007.586 1.157.479.165.991-.104 1.157-.586.675-2.088.241-4.478-1.338-6.235l.03.045z"></path></svg></span></a><a class="social share-item x ui-interactive is-icon-only" href="https://x.com/intent/tweet?text=ctf%E6%AF%94%E8%B5%9B%E5%8F%8A%E5%A4%87%E8%B5%9B%E6%80%9D%E8%B7%AF%20-%20SO%E7%9A%84%E5%8D%9A%E5%AE%A2&amp;url=https%3A%2F%2Fmetalso.github.io%2F2026%2F03%2F07%2FCTF%2F" target="_blank" rel="external nofollow noopener noreferrer" aria-label="分享文章: X" title="分享文章: X"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Simple Icons - https://creativecommons.org/publicdomain/zero/1.0/ --><path fill="currentColor" d="M14.234 10.162L22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299l-.929-1.329L3.076 1.56h3.182l5.965 8.532l.929 1.329l7.754 11.09h-3.182z"></path></svg></span></a><a class="social share-item telegram ui-interactive is-icon-only" href="https://t.me/share/url?url=https%3A%2F%2Fmetalso.github.io%2F2026%2F03%2F07%2FCTF%2F&amp;text=ctf%E6%AF%94%E8%B5%9B%E5%8F%8A%E5%A4%87%E8%B5%9B%E6%80%9D%E8%B7%AF%20-%20SO%E7%9A%84%E5%8D%9A%E5%AE%A2" target="_blank" rel="external nofollow noopener noreferrer" aria-label="分享文章: Telegram" title="分享文章: Telegram"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Simple Icons - https://creativecommons.org/publicdomain/zero/1.0/ --><path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12a12 12 0 0 0 12-12A12 12 0 0 0 12 0zm4.962 7.224c.1-.002.321.023.465.14a.5.5 0 0 1 .171.325c.016.093.036.306.02.472c-.18 1.898-.962 6.502-1.36 8.627c-.168.9-.499 1.201-.82 1.23c-.696.065-1.225-.46-1.9-.902c-1.056-.693-1.653-1.124-2.678-1.8c-1.185-.78-.417-1.21.258-1.91c.177-.184 3.247-2.977 3.307-3.23c.007-.032.014-.15-.056-.212s-.174-.041-.249-.024q-.159.037-5.061 3.345q-.72.495-1.302.48c-.428-.008-1.252-.241-1.865-.44c-.752-.245-1.349-.374-1.297-.789q.04-.324.893-.663q5.247-2.286 6.998-3.014c3.332-1.386 4.025-1.627 4.476-1.635"></path></svg></span></a><a class="social share-item whatsapp ui-interactive is-icon-only" href="https://wa.me/?text=ctf%E6%AF%94%E8%B5%9B%E5%8F%8A%E5%A4%87%E8%B5%9B%E6%80%9D%E8%B7%AF%20-%20SO%E7%9A%84%E5%8D%9A%E5%AE%A2%0Ahttps%3A%2F%2Fmetalso.github.io%2F2026%2F03%2F07%2FCTF%2F" target="_blank" rel="external nofollow noopener noreferrer" aria-label="分享文章: WhatsApp" title="分享文章: WhatsApp"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Simple Icons - https://creativecommons.org/publicdomain/zero/1.0/ --><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967c-.273-.099-.471-.148-.67.15c-.197.297-.767.966-.94 1.164c-.173.199-.347.223-.644.075c-.297-.15-1.255-.463-2.39-1.475c-.883-.788-1.48-1.761-1.653-2.059c-.173-.297-.018-.458.13-.606c.134-.133.298-.347.446-.52s.198-.298.298-.497c.099-.198.05-.371-.025-.52s-.669-1.612-.916-2.207c-.242-.579-.487-.5-.669-.51a13 13 0 0 0-.57-.01c-.198 0-.52.074-.792.372c-.272.297-1.04 1.016-1.04 2.479c0 1.462 1.065 2.875 1.213 3.074s2.096 3.2 5.077 4.487c.709.306 1.262.489 1.694.625c.712.227 1.36.195 1.871.118c.571-.085 1.758-.719 2.006-1.413s.248-1.289.173-1.413c-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214l-3.741.982l.998-3.648l-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884c2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.82 11.82 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.9 11.9 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.48-8.413"></path></svg></span></a><a class="social share-item email ui-interactive is-icon-only" href="mailto:?subject=ctf%E6%AF%94%E8%B5%9B%E5%8F%8A%E5%A4%87%E8%B5%9B%E6%80%9D%E8%B7%AF%20-%20SO%E7%9A%84%E5%8D%9A%E5%AE%A2&amp;body=https%3A%2F%2Fmetalso.github.io%2F2026%2F03%2F07%2FCTF%2F" aria-label="分享文章: Email" title="分享文章: Email"><span class="share-item__icon ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><path fill="currentColor" fill-rule="evenodd" d="M3.172 5.172C2 6.343 2 8.229 2 12s0 5.657 1.172 6.828C4.343 20 6.229 20 10 20h4c3.771 0 5.657 0 6.828-1.172C22 17.657 22 15.771 22 12s0-5.657-1.172-6.828C19.657 4 17.771 4 14 4h-4C6.229 4 4.343 4 3.172 5.172m15.404 2.348a.75.75 0 0 1-.096 1.056l-2.196 1.83c-.887.739-1.605 1.338-2.24 1.746-.66.424-1.303.693-2.044.693s-1.384-.269-2.045-.693c-.634-.408-1.352-1.007-2.239-1.745L5.52 8.576a.75.75 0 1 1 .96-1.152l2.159 1.799c.933.777 1.58 1.315 2.128 1.667.529.34.888.455 1.233.455s.704-.115 1.233-.455c.547-.352 1.195-.89 2.128-1.667l2.159-1.8a.75.75 0 0 1 1.056.097" clip-rule="evenodd"></path></svg></span></a></div>
+      <div class="share-qrcode" id="share-qrcode" style="opacity:0;height:0"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&amp;data=https%3A%2F%2Fmetalso.github.io%2F2026%2F03%2F07%2FCTF%2F" onerror="this.onerror=null;this.src=&quot;/images/stellar-error.491ee870f4940739.svg&quot;" data-stellar-image-color="{&quot;size&quot;:64,&quot;hsla&quot;:[0,0,51.2056,1]}" data-stellar-image-source="https://api.qrserver.com/v1/create-qr-code/?size=256x256&amp;data=https%3A%2F%2Fmetalso.github.io%2F2026%2F03%2F07%2FCTF%2F"></div>
     </div>
   </div>
 
@@ -469,7 +572,7 @@
 </div>
     </section></div>
 
-<div class="related-wrap slide-up" id="read-next"><section class="body"><div class="item" id="prev"><div class="note"><svg class="icon" viewBox="0 0 1 1" data-icon="default:arrow-left" aria-hidden="true"></svg> 较新文章</div><a href="/2026/03/07/CTF/Misc/" data-stellar-navigation="">Misc题</a></div><div class="item" id="next"><div class="note">较早文章 <svg class="icon" viewBox="0 0 1 1" data-icon="default:arrow-right" aria-hidden="true"></svg></div><a href="/2026/03/07/CTF/web%E9%A2%98/" data-stellar-navigation="">web题</a></div></section></div>
+<div class="related-wrap slide-up" id="read-next"><section class="body"><div class="item" id="prev"><div class="note"><svg class="icon" viewBox="0 0 1 1" data-icon="default:arrow-left" aria-hidden="true"></svg> 较新文章</div><a href="/2026/03/07/%E5%88%B6%E4%BD%9C%E7%B3%BB%E7%BB%9Fu%E7%9B%98%E6%97%B6%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" data-stellar-navigation="">制作系统u盘时的注意事项</a></div><div class="item" id="next"></div></section></div>
 
 
 
@@ -489,7 +592,7 @@
       <button type="button" class="cap-action ui-interactive card-hover card-hover--spotlight" data-shell-action="toggle-toc" aria-label="Toggle table of contents" aria-pressed="false"><span class="ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"></path></svg></span></button>
     </div>
   
-  <div class="widget-body"><ol class="toc ui-collection-adapter"><li class="toc-item toc-level-2"><a class="toc-link ui-interactive" href="#SQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E5%8F%A5" data-stellar-navigation=""><span class="toc-text">SQL基础语句</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link ui-interactive" href="#%E4%B8%80%E3%80%81%E5%B8%A6%E6%9C%89%E6%9D%A1%E4%BB%B6%E7%9A%84%E6%9F%A5%E8%AF%A2-where" data-stellar-navigation=""><span class="toc-text">一、带有条件的查询 where</span></a></li><li class="toc-item toc-level-4"><a class="toc-link ui-interactive" href="#%E4%BA%8C%E3%80%81INSERT-%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE" data-stellar-navigation=""><span class="toc-text">二、INSERT 插入数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link ui-interactive" href="#%E4%B8%A4%E7%A7%8D%E6%B3%A8%E9%87%8A" data-stellar-navigation=""><span class="toc-text">两种注释</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link ui-interactive" href="#%E7%9B%B4%E6%8E%A5%E6%B3%A8%E9%87%8A" data-stellar-navigation=""><span class="toc-text">直接注释</span></a></li></ol></div>
+  <div class="widget-body"><ol class="toc ui-collection-adapter"><li class="toc-item toc-level-1"><a class="toc-link ui-interactive" href="#%E4%BB%80%E4%B9%88%E6%98%AFCTF" data-stellar-navigation=""><span class="toc-text">什么是CTF</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link ui-interactive" href="#ctf%E6%AF%94%E8%B5%9B" data-stellar-navigation=""><span class="toc-text">ctf比赛</span></a></li><li class="toc-item toc-level-4"><a class="toc-link ui-interactive" href="#%E5%A4%87%E6%88%98%E6%80%9D%E8%B7%AF" data-stellar-navigation=""><span class="toc-text">备战思路</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link ui-interactive" href="#CTF%E7%9A%84%E7%9B%B8%E5%85%B3%E9%A2%98%E5%9E%8B" data-stellar-navigation=""><span class="toc-text">CTF的相关题型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link ui-interactive" href="#WEB" data-stellar-navigation=""><span class="toc-text">WEB</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link ui-interactive" href="#%E7%88%86%E7%A0%B4" data-stellar-navigation=""><span class="toc-text">爆破</span></a></li><li class="toc-item toc-level-3"><a class="toc-link ui-interactive" href="#%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2" data-stellar-navigation=""><span class="toc-text">信息泄露</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link ui-interactive" href="#log" data-stellar-navigation=""><span class="toc-text">log</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link ui-interactive" href="#SQL%E5%9F%BA%E7%A1%80%E8%AF%AD%E5%8F%A5" data-stellar-navigation=""><span class="toc-text">SQL基础语句</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link ui-interactive" href="#%E4%B8%80%E3%80%81%E5%B8%A6%E6%9C%89%E6%9D%A1%E4%BB%B6%E7%9A%84%E6%9F%A5%E8%AF%A2-where" data-stellar-navigation=""><span class="toc-text">一、带有条件的查询 where</span></a></li><li class="toc-item toc-level-4"><a class="toc-link ui-interactive" href="#%E4%BA%8C%E3%80%81INSERT-%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE" data-stellar-navigation=""><span class="toc-text">二、INSERT 插入数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link ui-interactive" href="#%E4%B8%A4%E7%A7%8D%E6%B3%A8%E9%87%8A" data-stellar-navigation=""><span class="toc-text">两种注释</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link ui-interactive" href="#%E7%9B%B4%E6%8E%A5%E6%B3%A8%E9%87%8A" data-stellar-navigation=""><span class="toc-text">直接注释</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link ui-interactive" href="#MISC" data-stellar-navigation=""><span class="toc-text">MISC</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link ui-interactive" href="#%E6%96%87%E4%BB%B6%E9%9A%90%E5%86%99" data-stellar-navigation=""><span class="toc-text">文件隐写</span></a></li></ol></li></ol></li></ol></div>
   <div class="widget-footer"><a class="top ui-interactive" onclick="util.scrollTop()"><span class="ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><path fill="currentColor" d="M20.536 3.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464" opacity=".5"></path><path fill="currentColor" d="M9.53 12.03a.75.75 0 0 1-1.06-1.06l3-3a.75.75 0 0 1 1.06 0l3 3a.75.75 0 1 1-1.06 1.06L12 9.56z"></path><path fill="currentColor" d="M9.53 16.03a.75.75 0 0 1-1.06-1.06l3-3a.75.75 0 0 1 1.06 0l3 3a.75.75 0 1 1-1.06 1.06L12 13.56z"></path></svg></span><span>回到顶部</span></a></div>
 </widget>
 
@@ -540,7 +643,7 @@
 <script data-stellar-script="defines">
   window.canonical = window.stellarClientData.canonical;
   const ctx = window.stellarClientData.ctx;
-  window.canonical.param = {permalink: "https://metalso.github.io/2026/03/07/CTF/sql%E6%B3%A8%E5%85%A5/", checklink: ctx.services.video.js};
+  window.canonical.param = {permalink: "https://metalso.github.io/2026/03/07/CTF/", checklink: ctx.services.video.js};
   ctx.date_suffix = {"just":"刚刚","min":"分钟前","hour":"小时前","day":"天前"};
   if (ctx.search) Object.assign(ctx.search, {"more":"更多","no_more":"没有更多了"});
   const def = window.stellarClientData.def;
@@ -568,4 +671,4 @@
 <script data-stellar-script="core" defer="" src="/js/navigation-init.js?v=2.0.0-rc.6"></script>
 </div>
 
-<script type="application/json" id="stellar-navigation-config">{"collection":"[\"post\",\"post\"]","url":"https://metalso.github.io/2026/03/07/CTF/sql%E6%B3%A8%E5%85%A5/","signature":"104bef6f30eb89c977c45b996684397ec4c7bb10e06c452ecad92fd14974197d"}</script></body></html>
+<script type="application/json" id="stellar-navigation-config">{"collection":"[\"post\",\"post\"]","url":"https://metalso.github.io/2026/03/07/CTF/","signature":"19f63f6ab3bfb648d2e62182df44a0b923272a1fe27938a2a4c2e32b478fd47e"}</script></body></html>
