@@ -65,18 +65,16 @@
   body:has(.article.banner[style*="/about/index/"]) .tag-plugin.grid[bg="box"] > .cell {
     background: #f1efec;
     border: 1px solid #e5e2dd;
-    border-radius: 24px !important;
-    padding: 24px 32px;
+    border-radius: 14px !important;
+    padding: 16px;
   }
-  body:has(.article.banner[style*="/about/index/"]) .tag-plugin.hashtag {
-    background: transparent;
-    border-radius: 0;
-    color: var(--text-p1);
-    font-size: 1.2em;
-    padding: 0;
+  body:has(.article.banner[style*="/about/index/"]) .tag-plugin.grid .cell > .tag-plugin.quot {
+    align-items: flex-start;
+    margin: 0 1rem 0.75rem;
   }
-  body:has(.article.banner[style*="/about/index/"]) .tag-plugin.hashtag .icon {
-    color: #ff6b00;
+  body:has(.article.banner[style*="/about/index/"]) .tag-plugin.grid .cell > p {
+    text-indent: 2em;
+    line-height: 1.6;
   }
   :root[data-theme="dark"] body:has(.article.banner[style*="/about/index/"]) .tag-plugin.grid[bg="box"] > .cell {
     background: var(--block);
@@ -90,7 +88,7 @@
   }
   @media (max-width: 600px) {
     body:has(.article.banner[style*="/about/index/"]) .tag-plugin.grid[bg="box"] > .cell {
-      padding: 20px;
+      padding: 16px;
     }
   }
 </style>
@@ -265,6 +263,24 @@
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
   
     
+<a class="ui-collection__item ui-interactive card-hover card-hover--spotlight" href="/2026/10/15/SQL%E8%AF%AD%E5%8F%A5/" title="SQL语句">
+  
+  
+  <span class="ui-collection__initial" aria-hidden="true">S</span>
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">SQL语句</span>
+      
+      
+    </span>
+  
+  
+  
+</a>
+
+  
+    
 <a class="ui-collection__item ui-interactive card-hover card-hover--spotlight" href="/2026/07/13/%E5%85%A8%E6%A0%88%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%AC%94%E8%AE%B0/" title="全栈网络安全笔记">
   
   
@@ -426,24 +442,6 @@
 </a>
 
   
-    
-<a class="ui-collection__item ui-interactive card-hover card-hover--spotlight" href="/2026/07/20/windows%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="windows常用命令">
-  
-  
-  <span class="ui-collection__initial" aria-hidden="true">W</span>
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">windows常用命令</span>
-      
-      
-    </span>
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -474,7 +472,10 @@
 
 <div class="listing-nav"><div class="listing-nav__surface"><div class="listing-nav__viewport"><nav class="post"><a class="active" href="/">近期发布</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/topic/">专栏</a><a href="/archives/">归档</a></nav></div></div></div>
 
-<div class="post-list post"><div class="post-card-wrap slide-up"><a class="post-card post photo card-hover card-hover--spotlight card-hover--tilt" style="--cover-url:url('/images/posts/ros2-cover.png')" href="/2026/07/15/ROS2/">
+<div class="post-list post"><div class="post-card-wrap slide-up"><a class="post-card post card-hover card-hover--spotlight card-hover--tilt" href="/2026/07/20/windows%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+<article class="md-text"><h2 class="post-title">windows常用命令</h2><div class="excerpt"><p>常用命令安装软件时可在官方查询是否含有该软件，可直接复制命令wingetwinget由于是微软维护的程序包，在下载时会通过弹窗询问，不像scoop那么迅速，同时winget下载软件时会写入注册表
+1234567winget list         ...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg class="icon" viewBox="0 0 1 1" data-icon="default:calendar" aria-hidden="true"></svg><time datetime="2026-07-20T10:20:50.000Z">2026-07-20</time></span><span class="cap breadcrumb"><svg class="icon" viewBox="0 0 1 1" data-icon="default:category" aria-hidden="true"></svg><span>笔记</span></span></div></article>
+</a></div><div class="post-card-wrap slide-up"><a class="post-card post photo card-hover card-hover--spotlight card-hover--tilt" style="--cover-url:url('/images/posts/ros2-cover.png')" href="/2026/07/15/ROS2/">
 <div class="cover" position="bottom" style="--cover-url:url('/images/posts/ros2-cover.png')"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/images/posts/ros2-cover.png" onerror="this.onerror=null;this.src=&quot;/images/stellar-error.491ee870f4940739.svg&quot;" data-stellar-image-color="{&quot;size&quot;:64,&quot;hsla&quot;:[38.9725,30.402,93.2022,1]}" data-stellar-image-source="/images/posts/ros2-cover.png"><div class="cover-info" position="bottom" data-text-adaptive="split"><div class="text headline">ROS2</div><div class="text caption">机器人操作系统（Robot Operating System, ROS）是一套​​开源软件库与工具集</div></div></div>
 </a></div><div class="post-card-wrap slide-up"><a class="post-card post card-hover card-hover--spotlight card-hover--tilt" href="/2026/07/13/%E5%85%A8%E6%A0%88%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%AC%94%E8%AE%B0/">
 <article class="md-text"><h2 class="post-title">全栈网络安全笔记</h2><div class="meta cap"><span class="cap" id="post-meta"><svg class="icon" viewBox="0 0 1 1" data-icon="default:calendar" aria-hidden="true"></svg><time datetime="2026-07-13T11:04:00.000Z">2026-07-13</time></span><span class="cap breadcrumb"><svg class="icon" viewBox="0 0 1 1" data-icon="default:category" aria-hidden="true"></svg><span>笔记</span></span></div></article>
@@ -492,8 +493,6 @@
 <article class="md-text"><h2 class="post-title">义和团改编剧本（非真实历史）</h2><div class="excerpt"><p>自创的义和团历史背景的故事</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg class="icon" viewBox="0 0 1 1" data-icon="default:calendar" aria-hidden="true"></svg><time datetime="2026-03-30T10:43:14.000Z">2026-03-30</time></span><span class="cap breadcrumb"><svg class="icon" viewBox="0 0 1 1" data-icon="default:category" aria-hidden="true"></svg><span>杂文</span></span></div></article>
 </a></div><div class="post-card-wrap slide-up"><a class="post-card post card-hover card-hover--spotlight card-hover--tilt" href="/2026/03/14/STC89C52RC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88keil%20uvision%EF%BC%89/">
 <article class="md-text"><h2 class="post-title">STC89C52RC学习笔记（keil uvision）</h2><div class="excerpt"><p>文本为使用STC89C52RC的学习笔记（keil uvision）</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg class="icon" viewBox="0 0 1 1" data-icon="default:calendar" aria-hidden="true"></svg><time datetime="2026-03-14T02:26:24.000Z">2026-03-14</time></span><span class="cap breadcrumb"><svg class="icon" viewBox="0 0 1 1" data-icon="default:category" aria-hidden="true"></svg><span>笔记</span></span></div></article>
-</a></div><div class="post-card-wrap slide-up"><a class="post-card post card-hover card-hover--spotlight card-hover--tilt" href="/2026/03/11/%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/">
-<article class="md-text"><h2 class="post-title">搭建Hexo博客</h2><div class="excerpt"><p>快捷搭建自己博客的方式</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg class="icon" viewBox="0 0 1 1" data-icon="default:calendar" aria-hidden="true"></svg><time datetime="2026-03-11T10:52:18.000Z">2026-03-11</time></span><span class="cap breadcrumb"><svg class="icon" viewBox="0 0 1 1" data-icon="default:category" aria-hidden="true"></svg><span>技术</span></span></div></article>
 </a></div></div>
 
   <div class="paginator-wrap dis-select slide-up">

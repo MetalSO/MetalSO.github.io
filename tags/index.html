@@ -69,18 +69,16 @@
   body:has(.article.banner[style*="/about/index/"]) .tag-plugin.grid[bg="box"] > .cell {
     background: #f1efec;
     border: 1px solid #e5e2dd;
-    border-radius: 24px !important;
-    padding: 24px 32px;
+    border-radius: 14px !important;
+    padding: 16px;
   }
-  body:has(.article.banner[style*="/about/index/"]) .tag-plugin.hashtag {
-    background: transparent;
-    border-radius: 0;
-    color: var(--text-p1);
-    font-size: 1.2em;
-    padding: 0;
+  body:has(.article.banner[style*="/about/index/"]) .tag-plugin.grid .cell > .tag-plugin.quot {
+    align-items: flex-start;
+    margin: 0 1rem 0.75rem;
   }
-  body:has(.article.banner[style*="/about/index/"]) .tag-plugin.hashtag .icon {
-    color: #ff6b00;
+  body:has(.article.banner[style*="/about/index/"]) .tag-plugin.grid .cell > p {
+    text-indent: 2em;
+    line-height: 1.6;
   }
   :root[data-theme="dark"] body:has(.article.banner[style*="/about/index/"]) .tag-plugin.grid[bg="box"] > .cell {
     background: var(--block);
@@ -94,7 +92,7 @@
   }
   @media (max-width: 600px) {
     body:has(.article.banner[style*="/about/index/"]) .tag-plugin.grid[bg="box"] > .cell {
-      padding: 20px;
+      padding: 16px;
     }
   }
 </style>
@@ -269,6 +267,24 @@
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
   
     
+<a class="ui-collection__item ui-interactive card-hover card-hover--spotlight" href="&#x2F;2026&#x2F;10&#x2F;15&#x2F;SQL%E8%AF%AD%E5%8F%A5&#x2F;" title="SQL语句">
+  
+  
+  <span class="ui-collection__initial" aria-hidden="true">S</span>
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">SQL语句</span>
+      
+      
+    </span>
+  
+  
+  
+</a>
+
+  
+    
 <a class="ui-collection__item ui-interactive card-hover card-hover--spotlight" href="&#x2F;2026&#x2F;07&#x2F;13&#x2F;%E5%85%A8%E6%A0%88%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%AC%94%E8%AE%B0&#x2F;" title="全栈网络安全笔记">
   
   
@@ -430,24 +446,6 @@
 </a>
 
   
-    
-<a class="ui-collection__item ui-interactive card-hover card-hover--spotlight" href="&#x2F;2026&#x2F;07&#x2F;20&#x2F;windows%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4&#x2F;" title="windows常用命令">
-  
-  
-  <span class="ui-collection__initial" aria-hidden="true">W</span>
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">windows常用命令</span>
-      
-      
-    </span>
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -503,11 +501,6 @@
           <span class='name'>单片机</span>
         </a>
       
-        <a class='tag' href="/tags/ctf/">
-          <svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>
-          <span class='name'>ctf</span>
-        </a>
-      
         <a class='tag' href="/tags/Linux/">
           <svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>
           <span class='name'>Linux</span>
@@ -516,6 +509,16 @@
         <a class='tag' href="/tags/markdown/">
           <svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>
           <span class='name'>markdown</span>
+        </a>
+      
+        <a class='tag' href="/tags/ctf/">
+          <svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>
+          <span class='name'>ctf</span>
+        </a>
+      
+        <a class='tag' href="/tags/SQL/">
+          <svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>
+          <span class='name'>SQL</span>
         </a>
       
         <a class='tag' href="/tags/VMware/">
@@ -543,14 +546,14 @@
           <span class='name'>pandoc</span>
         </a>
       
-        <a class='tag' href="/tags/vscode/">
-          <svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>
-          <span class='name'>vscode</span>
-        </a>
-      
         <a class='tag' href="/tags/vibecoding/">
           <svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>
           <span class='name'>vibecoding</span>
+        </a>
+      
+        <a class='tag' href="/tags/vscode/">
+          <svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>
+          <span class='name'>vscode</span>
         </a>
       
         <a class='tag' href="/tags/windows/">
@@ -588,14 +591,14 @@
           <span class='name'>游戏策划</span>
         </a>
       
-        <a class='tag' href="/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/">
-          <svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>
-          <span class='name'>离散数学</span>
-        </a>
-      
         <a class='tag' href="/tags/skill/">
           <svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>
           <span class='name'>skill</span>
+        </a>
+      
+        <a class='tag' href="/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/">
+          <svg class="icon" viewBox="0 0 1 1" data-icon="default:hashtag" aria-hidden="true"></svg>
+          <span class='name'>离散数学</span>
         </a>
       
         <a class='tag' href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">

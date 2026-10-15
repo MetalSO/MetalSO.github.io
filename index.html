@@ -69,18 +69,16 @@
   body:has(.article.banner[style*="/about/index/"]) .tag-plugin.grid[bg="box"] > .cell {
     background: #f1efec;
     border: 1px solid #e5e2dd;
-    border-radius: 24px !important;
-    padding: 24px 32px;
+    border-radius: 14px !important;
+    padding: 16px;
   }
-  body:has(.article.banner[style*="/about/index/"]) .tag-plugin.hashtag {
-    background: transparent;
-    border-radius: 0;
-    color: var(--text-p1);
-    font-size: 1.2em;
-    padding: 0;
+  body:has(.article.banner[style*="/about/index/"]) .tag-plugin.grid .cell > .tag-plugin.quot {
+    align-items: flex-start;
+    margin: 0 1rem 0.75rem;
   }
-  body:has(.article.banner[style*="/about/index/"]) .tag-plugin.hashtag .icon {
-    color: #ff6b00;
+  body:has(.article.banner[style*="/about/index/"]) .tag-plugin.grid .cell > p {
+    text-indent: 2em;
+    line-height: 1.6;
   }
   :root[data-theme="dark"] body:has(.article.banner[style*="/about/index/"]) .tag-plugin.grid[bg="box"] > .cell {
     background: var(--block);
@@ -94,7 +92,7 @@
   }
   @media (max-width: 600px) {
     body:has(.article.banner[style*="/about/index/"]) .tag-plugin.grid[bg="box"] > .cell {
-      padding: 20px;
+      padding: 16px;
     }
   }
 </style>
@@ -269,6 +267,24 @@
   <div class="widget-body"><div class="ui-collection" data-layout="list" data-variant="nav" data-density="compact">
   
     
+<a class="ui-collection__item ui-interactive card-hover card-hover--spotlight" href="&#x2F;2026&#x2F;10&#x2F;15&#x2F;SQL%E8%AF%AD%E5%8F%A5&#x2F;" title="SQL语句">
+  
+  
+  <span class="ui-collection__initial" aria-hidden="true">S</span>
+  
+    <span class="ui-collection__content">
+      
+      <span class="ui-collection__title">SQL语句</span>
+      
+      
+    </span>
+  
+  
+  
+</a>
+
+  
+    
 <a class="ui-collection__item ui-interactive card-hover card-hover--spotlight" href="&#x2F;2026&#x2F;07&#x2F;13&#x2F;%E5%85%A8%E6%A0%88%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%AC%94%E8%AE%B0&#x2F;" title="全栈网络安全笔记">
   
   
@@ -430,24 +446,6 @@
 </a>
 
   
-    
-<a class="ui-collection__item ui-interactive card-hover card-hover--spotlight" href="&#x2F;2026&#x2F;07&#x2F;20&#x2F;windows%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4&#x2F;" title="windows常用命令">
-  
-  
-  <span class="ui-collection__initial" aria-hidden="true">W</span>
-  
-    <span class="ui-collection__content">
-      
-      <span class="ui-collection__title">windows常用命令</span>
-      
-      
-    </span>
-  
-  
-  
-</a>
-
-  
 </div></div>
   
 </widget>
@@ -478,7 +476,15 @@
 
 <div class="listing-nav"><div class="listing-nav__surface"><div class="listing-nav__viewport"><nav class="post"><a class="active" href="/">近期发布</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/topic/">专栏</a><a href="/archives/">归档</a></nav></div></div></div>
 
-<div class="post-list post"><div class="post-card-wrap slide-up"><a class="post-card post card-hover card-hover--spotlight card-hover--tilt" href="/2026/10/14/pandoc%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">
+<div class="post-list post"><div class="post-card-wrap slide-up"><a class="post-card post card-hover card-hover--spotlight card-hover--tilt" href="/2026/10/15/SQL%E8%AF%AD%E5%8F%A5/">
+<article class="md-text"><h2 class="post-title">SQL语句</h2><div class="excerpt"><p>数据库的必备语法
+Update 增
+Delete 删
+Select 查
+Inset 改
+
+</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg class="icon" viewBox="0 0 1 1" data-icon="default:calendar" aria-hidden="true"></svg><time datetime="2026-10-15T09:50:31.000Z">2026-10-15</time></span><span class="cap breadcrumb"><svg class="icon" viewBox="0 0 1 1" data-icon="default:category" aria-hidden="true"></svg><span>语法</span></span></div></article>
+</a></div><div class="post-card-wrap slide-up"><a class="post-card post card-hover card-hover--spotlight card-hover--tilt" href="/2026/10/14/pandoc%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">
 <article class="md-text"><h2 class="post-title">pandoc基础命令</h2><div class="excerpt"><p>基础命令1pandoc input.docx -o output.md
 
 
@@ -538,14 +544,6 @@ conda activate inference：Anaconda 命令，切换到名叫 inference 的 Pytho
 <article class="md-text"><h2 class="post-title">离散数学笔记</h2><div class="excerpt"><p>命题：1.是表达判断的陈述句2.有一个确定真或者假的值
 联结词1.否定联结词2.合取联结词3.析取联结词4.蕴含联结词P仅当Q、Q每当P 都是P蕴含Q
 </p></div><div class="meta cap"><span class="cap" id="post-meta"><svg class="icon" viewBox="0 0 1 1" data-icon="default:calendar" aria-hidden="true"></svg><time datetime="2026-09-07T15:17:18.000Z">2026-09-07</time></span><span class="cap breadcrumb"><svg class="icon" viewBox="0 0 1 1" data-icon="default:category" aria-hidden="true"></svg><span>笔记</span></span></div></article>
-</a></div><div class="post-card-wrap slide-up"><a class="post-card post card-hover card-hover--spotlight card-hover--tilt" href="/2026/09/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/">
-<article class="md-text"><h2 class="post-title">计算机网络笔记</h2><div class="excerpt"><p>计算机网络概述计算机网络：由若干节点这些节点的链路组成
-互联网的边缘部分1.边缘部分由所有连接在互联网上的土机组成。这部分是用户直接使用的，用来进行通信（传送数据、音频或视频）和资源共享。
-
-客户服务器方式
-对等连接方式
-
-2.核心部分由大性网络和连...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg class="icon" viewBox="0 0 1 1" data-icon="default:calendar" aria-hidden="true"></svg><time datetime="2026-09-07T14:07:51.000Z">2026-09-07</time></span><span class="cap breadcrumb"><svg class="icon" viewBox="0 0 1 1" data-icon="default:category" aria-hidden="true"></svg><span>笔记</span></span></div></article>
 </a></div></div>
 
   <div class='paginator-wrap dis-select slide-up'>
