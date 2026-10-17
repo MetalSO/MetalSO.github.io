@@ -129,7 +129,7 @@ body[data-page-layout='index_wiki'] {
 }
 .md-text .cmt-body.waline .wl-editor {
   font-size: var(--waline-font-size);
-  font-family: "Iowan Old Style", "Palatino Linotype", "Noto Serif SC", "Songti SC", "Microsoft Yahei", ui-serif, Georgia, "Times New Roman", serif;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Noto Serif SC", "Songti SC", "Courier New", ui-serif, Georgia, "Times New Roman", serif;
 }
 .md-text .cmt-body.waline .wl-content .wl-emoji,
 .md-text .cmt-body.waline .wl-content .vemoji {
